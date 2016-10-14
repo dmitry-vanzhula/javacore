@@ -1,4 +1,4 @@
-package com.dvanzhula.app.classwork.lessons4;
+package com.dvanzhula.app.classwork.lesson4;
 
 import org.junit.Assert;
 import org.junit.Test;

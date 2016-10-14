@@ -1,4 +1,4 @@
-package com.dvanzhula.app.classwork.lessons4;
+package com.dvanzhula.app.classwork.lesson4;
 
 /**
  * Created by dmitry on 12.10.16.
