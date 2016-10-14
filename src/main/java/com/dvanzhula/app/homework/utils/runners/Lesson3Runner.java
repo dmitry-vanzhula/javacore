@@ -1,4 +1,6 @@
-package com.dvanzhula.app.homework.utils.convertors.runners;
+package com.dvanzhula.app.homework.utils.runners;
+
+import com.dvanzhula.app.homework.utils.convertors.PrimitiveConvertor;
 
 /**
  * Created by dmitry on 09.10.16.

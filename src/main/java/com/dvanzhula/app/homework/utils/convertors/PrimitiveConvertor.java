@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework.utils.convertors.runners;
+package com.dvanzhula.app.homework.utils.convertors;
 
 /**
  * Created by dmitry on 09.10.16.
