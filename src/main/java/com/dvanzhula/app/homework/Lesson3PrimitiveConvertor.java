@@ -1,10 +1,10 @@
-package com.dvanzhula.app.homework.utils.convertors;
+package com.dvanzhula.app.homework;
 
 /**
  * Created by dmitry on 09.10.16.
  */
 
-public class PrimitiveConvertor {
+public class Lesson3PrimitiveConvertor {
 
 
     public char floatToChar(float floatNumber){

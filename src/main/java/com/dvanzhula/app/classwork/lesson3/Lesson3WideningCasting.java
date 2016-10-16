@@ -3,7 +3,8 @@ package com.dvanzhula.app.classwork.lesson3;
 /**
  * Created by dmitry on 08.10.16.
  */
-public class WideningCasting {
+public class Lesson3WideningCasting {
+
     static byte byte1 = 127;
     static short short1 = 0;
     static int int1 = 0;
@@ -11,7 +12,7 @@ public class WideningCasting {
     static float float1 = 0.0f;
     static double double1 = 0.0d;
 
-    public static void main(String[] args){
+    public static void widening(){
 
             double1 = float1 = long1 = int1 = short1 =byte1;
             System.out.println(double1);

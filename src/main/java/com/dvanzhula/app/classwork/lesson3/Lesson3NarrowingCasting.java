@@ -3,7 +3,7 @@ package com.dvanzhula.app.classwork.lesson3;
 /**
  * Created by dmitry on 08.10.16.
  */
-public class NarrowingCasting {
+public class Lesson3NarrowingCasting {
 
     int int1 = 0;
     float float1 = 3.14159f;
@@ -15,3 +15,4 @@ public class NarrowingCasting {
     }
 
 }
+
