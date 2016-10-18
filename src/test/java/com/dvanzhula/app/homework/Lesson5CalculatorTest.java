@@ -41,9 +41,9 @@ public class Lesson5CalculatorTest {
 
     @Test
     public void calculateCircleRadiusTest() {
-        double expRes = 201.06192982974676;
+        double expRes = 201.06192982974676d;
         Lesson5Calculator calculator = new Lesson5Calculator();
-        Assert.assertEquals(expRes, calculator.calculateCircleRadius(8.0), DELTA);
+        Assert.assertEquals(expRes, calculator.calculateCircleRadius(8.0d), DELTA);
     }
 
     @Test

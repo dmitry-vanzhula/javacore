@@ -40,14 +40,14 @@ public class Lesson4MathFunctionsTests {
 
     @Test
     public void getSquareRoot(){
-        double a = 25.0d, expRes = 5.0;
+        double a = 25.0d, expRes = 5.0d;
         Lesson4MathFunctions mathFunc = new Lesson4MathFunctions();
         Assert.assertEquals(expRes,mathFunc.getSquareRoot(a), DELTA);
     }
 
     @Test
     public void powerTest(){
-        double a = 2.0, b = 3.0, expRes = 9.0;
+        double a = 2.0d, b = 3.0d, expRes = 9.0d;
         Lesson4MathFunctions mathFunc = new Lesson4MathFunctions();
         Assert.assertNotEquals(expRes, mathFunc.power(a,b), DELTA);
     }
