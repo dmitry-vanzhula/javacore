@@ -1,5 +1,6 @@
-package com.dvanzhula.app.classwork.lesson4;
+package com.dvanzhula.app.homework;
 
+import com.dvanzhula.app.classwork.lesson4.Lesson4MathFunctions;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -52,9 +53,18 @@ public class Lesson4MathFunctionsTests {
     }
 
     @Test
-    public void isEvenNumberTest(){
+    public void isOddNumberTrueTest(){
+        int number = 3;
+        Lesson4MathFunctions mathFunc = new Lesson4MathFunctions();
+        Assert.assertTrue(mathFunc.isOddNumber(number));
+    }
+
+    @Test
+    public void isOddNumberFalseTest(){
         int number = 4;
         Lesson4MathFunctions mathFunc = new Lesson4MathFunctions();
-        Assert.assertTrue(mathFunc.isEvenNumber(number));
+        Assert.assertFalse(mathFunc.isOddNumber(number));
     }
-}
+
+    }
+

@@ -35,11 +35,14 @@ public class Lesson4MathFunctions {
         return result;
     }
 
-    public static boolean isEvenNumber(int number){
+    public static boolean isOddNumber(int number){
 
         boolean result = false;
-        if(number%2 == 0){
+        if (number % 2 > 0) {
+            System.out.println("true");
             result = true;
+        } else {
+            System.out.println("false");
         }
         return result;
     }

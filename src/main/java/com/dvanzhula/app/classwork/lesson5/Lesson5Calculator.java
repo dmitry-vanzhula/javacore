@@ -8,57 +8,39 @@ import java.util.Scanner;
 public class Lesson5Calculator {
 
 
-    public static void menu() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number of program:");
-        System.out.println("Number 1 - Right-angled triangle");
-        System.out.println("Number 2 - Calculate circle area");
-        System.out.println("Number 3 - Define if number is odd or even");
-        System.out.println("Number 4 - What an number is bigger/smaller");
-        int inputNumber = scanner.nextInt();
-        if (inputNumber == 1) {
-            Lesson5Calculator.rightAngledTriangleChecker();
-        } else if (inputNumber == 2) {
-            Lesson5Calculator.calculate();
-        } else if (inputNumber == 3) {
-            Lesson5Calculator.IsOdd();
-        } else if (inputNumber == 4) {
-            Lesson5Calculator.calculateBigger();
-        } else {
-            System.out.println("Error! Incorrect number");
-        }
-    }
-    public static boolean rightAngledTriangleChecker() {
-
-        Scanner scanner = new Scanner(System.in);
+    public static boolean rightAngledTriangleChecker(double a, double b, double c) {
+        /*Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number");
         double a = scanner.nextDouble();
         System.out.println("Enter second number");
         double b = scanner.nextDouble();
         System.out.println("Enter third number");
-        double c = scanner.nextDouble();
+        double c = scanner.nextDouble(); */ // changed logic of method without scanner
+        boolean result = false;
         if (c * c == a * a + b * b) {
             System.out.println("This is right angled triangle");
-            return true;
+             result = true;
         } else {
             System.out.println("This is not right angled triangle");
-            return false;
         }
+        return result;
     }
+    private static final double PI = 3.14d;
 
-    public static void calculate() {
-        Scanner scanner = new Scanner(System.in);
+    public static double calculateCircleRadius(double radius) {
+        /*Scanner scanner = new Scanner(System.in);
         System.out.println("Enter circle radius ");
+        double radius = scanner.nextDouble(); */ // changed logic of method without scanner
         double PI = Math.PI;
-        double radius = scanner.nextDouble();
         double circleArea = PI * radius * radius;
         System.out.println("Area is " + circleArea);
+        return circleArea;
     }
 
-    public static boolean IsOdd() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number");
-        int number = scanner.nextInt();
+    public static boolean isOddOrEven(int number) {
+        /*Scanner scanner = new Scanner(System.in);
+          System.out.println("Enter number");
+          int number = scanner.nextInt();*/ // changed logic of method without scanner
         boolean result = false;
         if (number % 2 > 0) {
             System.out.println("Number is odd");
@@ -69,18 +51,18 @@ public class Lesson5Calculator {
         return result;
     }
 
-    public static final double PI = 3.14d;
-
-    public static void calculateBigger() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter area1");
-        double area1 = scanner.nextDouble();
-        System.out.println("Enter area2");
-        double area2 = scanner.nextDouble();
-
+    public static boolean calculateBigger(double area1, double area2) {
+        /*Scanner scanner = new Scanner(System.in);
+          System.out.println("Enter area1");
+          double area1 = scanner.nextDouble();
+          System.out.println("Enter area2");
+          double area2 = scanner.nextDouble();*/ // changed logic of method without scanner
+        boolean result = false;
         if (area1 > area2) {
             System.out.println("Area1 is bigger");
+            result = true;
         } else
             System.out.println("Area2 is bigger");
+        return result;
     }
 }
