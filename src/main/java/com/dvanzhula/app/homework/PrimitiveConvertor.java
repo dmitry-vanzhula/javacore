@@ -4,7 +4,7 @@ package com.dvanzhula.app.homework;
  * Created by dmitry on 09.10.16.
  */
 
-public class Lesson3PrimitiveConvertor {
+public class PrimitiveConvertor {
 
 
     public char floatToChar(float floatNumber){

@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.classwork;
 
-import com.dvanzhula.app.classwork.lesson5.Lesson5Calculator;
+import com.dvanzhula.app.classwork.lesson5.Calculator;
 
 import java.util.Scanner;
 
@@ -29,23 +29,23 @@ public class Lesson5Runner {
                 double b = scanner.nextDouble();
                 System.out.println("Enter third number");
                 double c = scanner.nextDouble();
-                Lesson5Calculator.rightAngledTriangleChecker(a, b, c);
+                Calculator.rightAngledTriangleChecker(a, b, c);
             } else if (inputNumber == 2) {
                 System.out.println("Enter circle radius ");
                 double radius = scanner.nextDouble();
-                Lesson5Calculator.calculateCircleRadius(radius);
+                Calculator.calculateCircleRadius(radius);
 
             } else if (inputNumber == 3) {
                 System.out.println("Enter number");
                 int number = scanner.nextInt();
-                Lesson5Calculator.isOddOrEven(number);
+                Calculator.isOddOrEven(number);
 
             } else if (inputNumber == 4) {
                 System.out.println("Enter area1");
                 double area1 = scanner.nextDouble();
                 System.out.println("Enter area2");
                 double area2 = scanner.nextDouble();
-                Lesson5Calculator.calculateBigger(area1,area2);
+                Calculator.calculateBigger(area1,area2);
 
             } else {
                 System.out.println("Error! Incorrect number");

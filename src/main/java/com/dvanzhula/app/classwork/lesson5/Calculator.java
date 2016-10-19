@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by dmitry on 15.10.16.
  */
-public class Lesson5Calculator {
+public class Calculator {
 
 
     public static boolean rightAngledTriangleChecker(double a, double b, double c) {
