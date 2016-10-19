@@ -1,4 +1,4 @@
-package com.dvanzhula.app.runners.homework;
+package com.dvanzhula.runners.homework;
 
 import com.dvanzhula.app.homework.Lesson3PrimitiveConvertor;
 

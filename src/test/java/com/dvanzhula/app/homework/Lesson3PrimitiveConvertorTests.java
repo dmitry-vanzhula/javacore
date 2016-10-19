@@ -16,9 +16,9 @@ public class Lesson3PrimitiveConvertorTests {
 
     @Test
     public void intToCharTest(){
-        char expRes = 666;
+        char expRes = '*';
         Lesson3PrimitiveConvertor convertor = new Lesson3PrimitiveConvertor();
-        Assert.assertEquals(expRes,convertor.intToChar(666));
+        Assert.assertEquals(expRes,convertor.intToChar(42));
     }
     @Test
     public void charToIntTest(){

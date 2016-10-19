@@ -1,4 +1,4 @@
-package com.dvanzhula.app.runners.classwork;
+package com.dvanzhula.runners.classwork;
 
 import com.dvanzhula.app.classwork.lesson3.Lesson3NarrowingCasting;
 import com.dvanzhula.app.classwork.lesson3.Lesson3WideningCasting;
