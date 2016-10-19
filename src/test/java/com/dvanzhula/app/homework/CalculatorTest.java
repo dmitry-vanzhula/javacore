@@ -60,4 +60,4 @@ public class CalculatorTest {
         Assert.assertEquals(expRes, calculator.calculateBigger(7.5d, 8.5d));
     }
 
-    }
+}

@@ -9,11 +9,11 @@ import org.junit.Test;
  */
 public class NarrowingCastingTest {
     @Test
-    public void narrowingTest(){
+    public void narrowingTest() {
         int expRes = 3;
         int int1 = 0;
         float float1 = 3.14159f;
         NarrowingCasting narrowingCasting = new NarrowingCasting();
-        Assert.assertEquals(expRes,narrowingCasting.narrowing(int1,float1));
+        Assert.assertEquals(expRes, narrowingCasting.narrowing(int1, float1));
     }
 }

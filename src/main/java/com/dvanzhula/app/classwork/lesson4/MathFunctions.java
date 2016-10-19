@@ -6,36 +6,36 @@ package com.dvanzhula.app.classwork.lesson4;
 
 public class MathFunctions {
 
-    public  static int multiply (int a, int b){
+    public static int multiply(int a, int b) {
         return a * b;
     }
 
-    public static String addition(String a, String b){
+    public static String addition(String a, String b) {
         String result = a + b;
         return result;
     }
 
-    public static int subtraction(int a, int b){
+    public static int subtraction(int a, int b) {
         int result = a - b;
         return result;
     }
 
-    public static double chooseMaxNumber(double a, double b){
-        double result = Math.max(a,b);
+    public static double chooseMaxNumber(double a, double b) {
+        double result = Math.max(a, b);
         return result;
     }
 
-    public static double getSquareRoot(double a){
+    public static double getSquareRoot(double a) {
         double result = Math.sqrt(a);
         return result;
     }
 
     public static double power(double a, double b) {
-        double result = Math.pow(a,b);
+        double result = Math.pow(a, b);
         return result;
     }
 
-    public static boolean isOddNumber(int number){
+    public static boolean isOddNumber(int number) {
 
         boolean result = false;
         if (number % 2 > 0) {
@@ -46,6 +46,4 @@ public class MathFunctions {
         }
         return result;
     }
-
-
 }

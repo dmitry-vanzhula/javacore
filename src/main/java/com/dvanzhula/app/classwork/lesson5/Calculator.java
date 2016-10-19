@@ -1,23 +1,21 @@
 package com.dvanzhula.app.classwork.lesson5;
 
-import java.util.Scanner;
-
 /**
  * Created by dmitry on 15.10.16.
  */
 public class Calculator {
 
-
     public static boolean rightAngledTriangleChecker(double a, double b, double c) {
         boolean result = false;
         if (c * c == a * a + b * b) {
             System.out.println("This is right angled triangle");
-             result = true;
+            result = true;
         } else {
             System.out.println("This is not right angled triangle");
         }
         return result;
     }
+
     private static final double PI = 3.14d;
 
     public static double calculateCircleRadius(double radius) {
