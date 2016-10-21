@@ -23,9 +23,9 @@ import java.util.Arrays;
 
 // in practice difference between sorting methods is time, but we will use earthier solution
 
-        private static final String INPUT_DATA = "src/test/java/com/dvanzhula/app/classwork/lesson6/input";
+        private static final String INPUT_DATA = "src/test/resources/input";
 
-        private static final String EXPECTED_RESULTS = "src/test/java/com/dvanzhula/app/classwork/lesson6/expectedResult";
+        private static final String EXPECTED_RESULTS = "src/test/resources/expectedResult";
 
         private static int[] inputData = null;
 
