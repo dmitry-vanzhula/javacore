@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 public class MathFuncTest {
 
     @Test
-    @FileParameters(value = "/home/dmitry/Projects/javacore/src/test/resources/testdata.csv",
+    @FileParameters(value = "src/test/resources/testdata.csv",
             mapper = CsvWithHeaderMapper.class)
     public void test_add(int argA, int argB, int expOut) {
         MathFunctions mathFunc = new MathFunctions();

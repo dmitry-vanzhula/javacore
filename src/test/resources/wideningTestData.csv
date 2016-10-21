@@ -1,0 +1,2 @@
+ArgumentA,ArgumentB,ArgumentC,ArgumentD,expectedResult
+127,0,0.0f,0.0d,127.0

@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework;
+package com.dvanzhula.app.homework.Lesson3;
 
 import com.dvanzhula.app.classwork.lesson3.WideningCasting;
 import org.junit.Assert;
@@ -9,7 +9,7 @@ import org.junit.Test;
  */
 public class WideningCastingTest {
 
-    static final double DELTA = 1e-15;
+    public static final double DELTA = 1e-15;
 
     @Test
     public void wideningTest() {

@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework;
+package com.dvanzhula.app.homework.Lesson5;
 
 import com.dvanzhula.app.classwork.lesson5.Calculator;
 import org.junit.Assert;
