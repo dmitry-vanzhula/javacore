@@ -97,13 +97,13 @@ public class Lesson7LoopsArraysRunner {
         int[][] array = new int[8][5];
         for (int i = 0; i < array.length; i++) {
             for (int k = 0; k < array[i].length; k++) {
-                array[i][k] = (int) (Math.random() * 100);
+                array[i][k] = (int) (Math.random() * 100); // генерация случайных чисел
             }
         }
 
         for (int i = 0; i < array.length; i++) {
             for (int k = 0; k < array[i].length; k++) {
-                System.out.println(array[i][k]);
+                System.out.println(array[i][k]);  // массив в столбик
             }
         }
     }
@@ -113,16 +113,16 @@ public class Lesson7LoopsArraysRunner {
         int[][] array = new int[8][5];
         for (int i = 0; i < array.length; i++) {
             for (int k = 0; k < array[i].length; k++) {
-                array[i][k] = (int) (Math.random() * 1000);
+                array[i][k] = (int) (Math.random() * 1000); // генерация случайных чисел
             }
         }
 
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("%d%s", i + 1, ":");
+            System.out.printf("%d%s", i + 1, ":"); // %s - отобразить, как String; %d отобразить, как int;
             for (int k = 0; k < array[i].length; k++) {
-                System.out.printf("%5d", array[i][k]);
+                System.out.printf("%5d", array[i][k]); // отступ в 5 символов между числами в столбцах
             }
-            System.out.println("");
+            System.out.println(""); // отступ между строк
         }
 
     }
