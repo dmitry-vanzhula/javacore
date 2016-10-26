@@ -6,9 +6,12 @@ package com.dvanzhula.runners.homework;
 public class Lesson7LoopsArraysRunner {
     public static void main(String[] args) {
 
+        Lesson7LoopsArraysRunner.showAnArrayOfEvenNumbers();
+        Lesson7LoopsArraysRunner.showAnArrayOfOddNumbers();
+        Lesson7LoopsArraysRunner.showAnArrayOfNumbers();
+        Lesson7LoopsArraysRunner.showAnArrayOfNumbers2();
+        Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers();
         Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers2();
-
-
     }
 
     public static void showAnArrayOfEvenNumbers() {
