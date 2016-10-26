@@ -10,7 +10,7 @@ public class Lesson7LoopsArraysRunner {
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number 1-7:");
+        System.out.println("Enter a number 1-6:");
         System.out.println("Number 1 - Task a");
         System.out.println("Number 2 - Task b");
         System.out.println("Number 3 - Task c");
