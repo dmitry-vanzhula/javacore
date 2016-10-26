@@ -1,17 +1,43 @@
 package com.dvanzhula.runners.homework;
 
+import java.util.Scanner;
+
 /**
  * Created by Dmitriy on 10/24/2016.
  */
 public class Lesson7LoopsArraysRunner {
     public static void main(String[] args) {
 
-        Lesson7LoopsArraysRunner.showAnArrayOfEvenNumbers();
-        Lesson7LoopsArraysRunner.showAnArrayOfOddNumbers();
-        Lesson7LoopsArraysRunner.showAnArrayOfNumbers();
-        Lesson7LoopsArraysRunner.showAnArrayOfNumbers2();
-        Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers();
-        Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers2();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number 1-7:");
+        System.out.println("Number 1 - Task a");
+        System.out.println("Number 2 - Task b");
+        System.out.println("Number 3 - Task c");
+        System.out.println("Number 4 - Task d");
+        System.out.println("Number 5 - Task e");
+        System.out.println("Number 6 - Task g");
+        try {
+            int inputNumber = scanner.nextInt();
+
+            if (inputNumber == 1) {
+                Lesson7LoopsArraysRunner.showAnArrayOfEvenNumbers();
+            } else if (inputNumber == 2) {
+                Lesson7LoopsArraysRunner.showAnArrayOfOddNumbers();
+            } else if (inputNumber == 3) {
+                Lesson7LoopsArraysRunner.showAnArrayOfNumbers();
+            } else if (inputNumber == 4) {
+                Lesson7LoopsArraysRunner.showAnArrayOfNumbers2();
+            } else if (inputNumber == 5) {
+                Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers();
+            } else if (inputNumber == 6) {
+                Lesson7LoopsArraysRunner.showAnArrayOfMultidimensionalNumbers2();
+            } else {
+                System.out.println("Error! Incorrect number");
+            }
+        } catch (java.util.InputMismatchException e1) {
+            System.out.println("Error, wrong input. Please enter a valid number");
+        }
     }
 
     public static void showAnArrayOfEvenNumbers() {
@@ -21,13 +47,12 @@ public class Lesson7LoopsArraysRunner {
             array[i] = i * 2;
         }
         for (int i = 1; i < array.length; i++) {
-            System.out.println(array[i]); // массив в столбик
+            System.out.print(array[i] + " "); //  массив в строку
         }
-
-        System.out.println("----------------------"); // пробел между выводом текста на экран
-
+        System.out.println(" ");
+        System.out.println("");
         for (int i = 1; i < array.length; i++) {
-            System.out.print(array[i] + " "); // массив в строку
+            System.out.println(array[i] + " "); // массив в столбик
         }
     }
 
@@ -38,12 +63,12 @@ public class Lesson7LoopsArraysRunner {
             array[i] = i * 2 + 1;
         }
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]); // массив в столбик
+            System.out.print(array[i] + " "); //  массив в строку
         }
-        System.out.println("----------------------"); // пробел между выводом текста на экран
-
+        System.out.println(" ");
+        System.out.println("");
         for (int i = 49; i >= 0; i--) {
-            System.out.print(array[i] + " "); // массив в строку
+            System.out.println(array[i] + " "); // массив в столбик
         }
     }
 
@@ -56,15 +81,16 @@ public class Lesson7LoopsArraysRunner {
             array[i] = (int) (Math.random() * 10); // генерация случайных чисел
         }
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]); // массив в столбик
+            System.out.print(array[i] + " "); //  массив в строку
         }
-        System.out.println("----------------------"); // пробел между выводом текста на экран
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 evenNumbers++;
             }
         }
+        System.out.println(" ");
+        System.out.println(" ");
         System.out.println("There are " + evenNumbers + " even numbers"); // вывести на экран количество четных чисел
     }
 
@@ -75,10 +101,11 @@ public class Lesson7LoopsArraysRunner {
             array[i] = (int) (Math.random() * 1000); // генерация случайных чисел
         }
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]); // массив в столбик
+            System.out.print(array[i] + " "); //  массив в строку
         }
 
-        System.out.println("----------------------"); // пробел между выводом текста на экран
+        System.out.println(" ");
+        System.out.println(" ");
 
         int min = array[0]; // пусть минимум у нас будет 1-элемент в массиве
         int max = array[0]; // пусть максимум у нас будет 1-элемент в массиве
@@ -106,7 +133,7 @@ public class Lesson7LoopsArraysRunner {
 
         for (int i = 0; i < array.length; i++) {
             for (int k = 0; k < array[i].length; k++) {
-                System.out.println(array[i][k]);  // массив в столбик
+                System.out.print(array[i][k] + " ");  //  массив в строку
             }
         }
     }
@@ -127,6 +154,5 @@ public class Lesson7LoopsArraysRunner {
             }
             System.out.println(""); // отступ между строк
         }
-
     }
 }
