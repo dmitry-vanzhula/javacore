@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class Lesson7LoopsArraysRunner {
     public static void main(String[] args) {
+
         while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a number 1-7:");
