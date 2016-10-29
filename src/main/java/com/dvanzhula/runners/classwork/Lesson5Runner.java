@@ -22,33 +22,38 @@ public class Lesson5Runner {
         try {
             int inputNumber = scanner.nextInt();
 
-            if (inputNumber == 1) {
-                System.out.println("Enter first number");
+            switch (inputNumber) {
+                case 1:   System.out.println("Enter first number");
                 double a = scanner.nextDouble();
                 System.out.println("Enter second number");
                 double b = scanner.nextDouble();
                 System.out.println("Enter third number");
                 double c = scanner.nextDouble();
                 Calculator.rightAngledTriangleChecker(a, b, c);
-            } else if (inputNumber == 2) {
+                    break;
+                case 2:
                 System.out.println("Enter circle radius ");
                 double radius = scanner.nextDouble();
                 Calculator.calculateCircleRadius(radius);
+                    break;
 
-            } else if (inputNumber == 3) {
+                case 3 :
                 System.out.println("Enter number");
                 int number = scanner.nextInt();
                 Calculator.isOddOrEven(number);
+                    break;
 
-            } else if (inputNumber == 4) {
+                case 4:
                 System.out.println("Enter area1");
                 double area1 = scanner.nextDouble();
                 System.out.println("Enter area2");
                 double area2 = scanner.nextDouble();
                 Calculator.calculateBigger(area1,area2);
+                    break;
 
-            } else {
+                default:
                 System.out.println("Error! Incorrect number");
+                    break;
 
             }
         } catch (java.util.InputMismatchException e1) {
