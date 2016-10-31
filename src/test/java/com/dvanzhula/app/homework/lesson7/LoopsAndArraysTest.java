@@ -60,9 +60,9 @@ public class LoopsAndArraysTest {
         int maxValue = 9;
         int[] myArray = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
         boolean allValuesInRange = true;
-        Assert.assertEquals(myArray.length, arrayLength);
+        Assert.assertEquals(arrayLength,myArray.length);
         for (int i = 0; i < myArray.length; i++){
-            if (minValue <= myArray[i] && myArray[i] <= maxValue){
+            if (!(minValue <= myArray[i] && myArray[i] <= maxValue)){
                 allValuesInRange = false;
             }
         }
