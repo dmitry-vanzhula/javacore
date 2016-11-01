@@ -26,17 +26,21 @@ public class Lesson7LoopsArraysRunner {
                 int arrayLength2;
                 int min;
                 int max;
+                int [] array;
+                int [] arrayOfRandomNumbers;
                 int inputNumber = scanner.nextInt();
                 switch (inputNumber) {
                     case 1:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
-                        LoopsAndArrays.showAnArrayOfEvenNumbers(arrayLength);
+                        array = LoopsAndArrays.createArray(arrayLength);
+                        LoopsAndArrays.showAnArrayOfEvenNumbers(array);
                         break;
                     case 2:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
-                        LoopsAndArrays.showAnArrayOfOddNumbers(arrayLength);
+                        array = LoopsAndArrays.createArray(arrayLength);
+                        LoopsAndArrays.showAnArrayOfOddNumbers(array);
                         break;
                     case 3:
                         System.out.println("Enter array length");
@@ -45,7 +49,8 @@ public class Lesson7LoopsArraysRunner {
                         min = scanner.nextInt();
                         System.out.println("Enter the maximum boundary");
                         max = scanner.nextInt();
-                        LoopsAndArrays.showHowManyEvenNumbers(arrayLength, min, max);
+                        arrayOfRandomNumbers = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,min,max);
+                        LoopsAndArrays.calculateHowManyEvenNumbers(arrayOfRandomNumbers);
                         break;
                     case 4:
                         System.out.println("Enter array length");
@@ -54,7 +59,8 @@ public class Lesson7LoopsArraysRunner {
                         min = scanner.nextInt();
                         System.out.println("Enter the maximum boundary");
                         max = scanner.nextInt();
-                        LoopsAndArrays.showMinNumber(arrayLength, min, max);
+                        arrayOfRandomNumbers = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,min,max);
+                        LoopsAndArrays.showMinNumber(arrayOfRandomNumbers);
                         break;
                     case 5:
                         System.out.println("Enter array length");
@@ -63,7 +69,8 @@ public class Lesson7LoopsArraysRunner {
                         min = scanner.nextInt();
                         System.out.println("Enter maximum boundary");
                         max = scanner.nextInt();
-                        LoopsAndArrays.showMaxNumber(arrayLength, min, max);
+                        arrayOfRandomNumbers = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,min,max);
+                        LoopsAndArrays.showMaxNumber(arrayOfRandomNumbers);
                         break;
                     case 6:
                         System.out.println("Enter length");
