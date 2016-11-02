@@ -1,5 +1,6 @@
 package com.dvanzhula.runners.classwork;
 
+import com.dvanzhula.app.classwork.Lesson9.ArraySort;
 import com.dvanzhula.app.classwork.Lesson9.ConvertorCharArrayToString;
 
 /**
@@ -8,6 +9,9 @@ import com.dvanzhula.app.classwork.Lesson9.ConvertorCharArrayToString;
 public class Lesson9Runner {
 
     public static void main(String[] args) {
-        ConvertorCharArrayToString.showAndConvertCharToString();
+        char[] myArray = new char[256];
+        ConvertorCharArrayToString.showAndConvertCharToString(myArray);
+        int[] array = {5,4,3,2,1};
+        ArraySort.bubbleSorting(array);
     }
 }

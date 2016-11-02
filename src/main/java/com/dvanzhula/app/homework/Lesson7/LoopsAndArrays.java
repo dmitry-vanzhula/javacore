@@ -110,9 +110,13 @@ public class LoopsAndArrays {
                 array[i][k] = generatorOfRandomNumbers(min, max);
             }
         }
-        System.out.println(Arrays.deepToString(array));
-        System.out.println("  ");
-        System.out.println("  ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf("%d%s", i + 1, ":");
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.printf("%5d", array[i][j]);
+            }
+            System.out.println("");
+        }
         return array;
     }
 }

@@ -7,13 +7,13 @@ import java.util.Arrays;
  */
 public class ConvertorCharArrayToString {
 
-    public static void showAndConvertCharToString(){
-
-        char[] array = new char[256];
-        for(int i = 0; i < array.length; i++){
-            array[i] = (char) i;
+    public static String showAndConvertCharToString(char[] myArray) {
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = (char) i;
         }
-        String myString = Arrays.toString(array);
+        String myString = Arrays.toString(myArray);
         System.out.println("Char array: \n" + myString);
+        //System.out.println(Arrays.toString(myArray));
+        return myString;
     }
 }
