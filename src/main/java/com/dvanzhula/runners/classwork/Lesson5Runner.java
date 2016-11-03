@@ -5,7 +5,7 @@ import com.dvanzhula.app.classwork.lesson5.Calculator;
 import java.util.Scanner;
 
 /**
- * Created by dmitry on 15.10.16.
+ * Created by Dmitry Vanzhula on 15.10.16.
  */
 
 

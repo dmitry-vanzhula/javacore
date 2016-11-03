@@ -5,7 +5,7 @@ import com.dvanzhula.app.homework.Lesson7.LoopsAndArrays;
 import java.util.Scanner;
 
 /**
- * Created by Dmitriy on 10/24/2016.
+ * Created by Dmitry Vanzhula on 10/24/2016.
  */
 public class Lesson7LoopsArraysRunner {
     public static void main(String[] args) {

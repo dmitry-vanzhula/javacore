@@ -4,7 +4,7 @@ import com.dvanzhula.app.classwork.lesson3.NarrowingCasting;
 import com.dvanzhula.app.classwork.lesson3.WideningCasting;
 
 /**
- * Created by dmitry on 08.10.16.
+ * Created by Dmitry Vanzhula on 08.10.16.
  */
 public class Lesson3Runner {
 

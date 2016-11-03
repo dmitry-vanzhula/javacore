@@ -1,7 +1,7 @@
 package com.dvanzhula.app.classwork.lesson3;
 
 /**
- * Created by dmitry on 08.10.16.
+ * Created by Dmitry Vanzhula on 08.10.16.
  */
 public class NarrowingCasting {
     public static int narrowing(int int1, float float1) {

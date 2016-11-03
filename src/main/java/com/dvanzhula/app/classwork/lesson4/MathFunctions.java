@@ -1,7 +1,7 @@
 package com.dvanzhula.app.classwork.lesson4;
 
 /**
- * Created by dmitry on 12.10.16.
+ * Created by Dmitry Vanzhula on 12.10.16.
  */
 
 public class MathFunctions {

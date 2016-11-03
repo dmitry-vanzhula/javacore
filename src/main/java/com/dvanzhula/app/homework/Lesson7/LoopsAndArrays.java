@@ -4,7 +4,7 @@ package com.dvanzhula.app.homework.Lesson7;
 import java.util.Arrays;
 
 /**
- * Created by Dmitriy on 10/27/2016.
+ * Created by Dmitry Vanzhula on 10/27/2016.
  */
 public class LoopsAndArrays {
 

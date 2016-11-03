@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 
 
 /**
- * Created by Dmitriy on 10/20/2016.
+ * Created by Dmitry Vanzhula on 10/20/2016.
  */
 @RunWith(JUnitParamsRunner.class)
 public class MathFunctionsDataDrivenTest {

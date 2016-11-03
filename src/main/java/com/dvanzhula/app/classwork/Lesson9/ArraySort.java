@@ -1,9 +1,7 @@
 package com.dvanzhula.app.classwork.Lesson9;
 
-import java.util.Arrays;
-
 /**
- * Created by dmitry on 10/29/16.
+ * Created by Dmitry Vanzhula on 10/29/16.
  */
 public class ArraySort {
 
@@ -17,7 +15,6 @@ public class ArraySort {
                 }
             }
         }
-        System.out.println(Arrays.toString(array));
             return array;
     }
 }

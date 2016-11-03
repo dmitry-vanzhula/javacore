@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Dmitriy on 11/2/2016.
+ * Created by Dmitry Vanzhula on 11/2/2016.
  */
 public class BubbleSortTest {
     @Test

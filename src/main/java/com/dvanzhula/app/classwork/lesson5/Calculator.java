@@ -1,7 +1,7 @@
 package com.dvanzhula.app.classwork.lesson5;
 
 /**
- * Created by dmitry on 15.10.16.
+ * Created by Dmitry Vanzhula on 15.10.16.
  */
 public class Calculator {
 

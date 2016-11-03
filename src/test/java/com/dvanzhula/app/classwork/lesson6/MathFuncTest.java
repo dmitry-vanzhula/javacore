@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Created by dmitry on 19.10.16.
+ * Created by Dmitry Vanzhula on 19.10.16.
  */
 @RunWith(JUnitParamsRunner.class)
 public class MathFuncTest {
