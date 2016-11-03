@@ -1,7 +1,7 @@
 package com.dvanzhula.app.homework.Lesson3;
 
 /**
- * Created by dmitry on 09.10.16.
+ * Created by Dmitry Vanzhula on 09.10.16.
  */
 
 public class PrimitiveConvertor {

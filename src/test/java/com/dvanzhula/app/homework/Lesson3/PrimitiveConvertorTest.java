@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Dmitriy on 10/18/2016.
+ * Created by Dmitry Vanzhula on 10/18/2016.
  */
 public class PrimitiveConvertorTest {
     @Test

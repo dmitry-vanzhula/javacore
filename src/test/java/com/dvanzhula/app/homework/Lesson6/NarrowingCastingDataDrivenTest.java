@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Created by Dmitriy on 10/21/2016.
+ * Created by Dmitry Vanzhula on 10/21/2016.
  */
 @RunWith(JUnitParamsRunner.class)
 public class NarrowingCastingDataDrivenTest {

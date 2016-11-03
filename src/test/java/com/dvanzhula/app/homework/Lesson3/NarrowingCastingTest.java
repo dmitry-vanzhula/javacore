@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by dmitry on 19.10.16.
+ * Created by Dmitry Vanzhula on 19.10.16.
  */
 public class NarrowingCastingTest {
     @Test

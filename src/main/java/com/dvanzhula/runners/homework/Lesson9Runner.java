@@ -5,7 +5,7 @@ import com.dvanzhula.app.homework.Lesson9.BubbleSort;
 import java.util.Arrays;
 
 /**
- * Created by Dmitriy on 11/2/2016.
+ * Created by Dmitry Vanzhula on 11/2/2016.
  */
 public class Lesson9Runner {
 

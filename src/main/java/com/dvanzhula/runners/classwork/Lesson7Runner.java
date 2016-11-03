@@ -3,7 +3,7 @@ package com.dvanzhula.runners.classwork;
 import java.util.Scanner;
 
 /**
- * Created by dmitry on 10/22/16.
+ * Created by Dmitry Vanzhula on 10/22/16.
  */
 public class Lesson7Runner {
     public static void main(String[] args) {

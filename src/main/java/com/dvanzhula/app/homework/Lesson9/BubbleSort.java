@@ -1,7 +1,7 @@
 package com.dvanzhula.app.homework.Lesson9;
 
 /**
- * Created by Dmitriy on 11/2/2016.
+ * Created by Dmitry Vanzhula on 11/2/2016.
  */
 public class BubbleSort {
 

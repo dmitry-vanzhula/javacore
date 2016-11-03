@@ -3,7 +3,7 @@ package com.dvanzhula.runners.homework;
 import com.dvanzhula.app.homework.Lesson3.PrimitiveConvertor;
 
 /**
- * Created by dmitry on 09.10.16.
+ * Created by Dmitry Vanzhula on 09.10.16.
  */
 public class Lesson3Runner {
 

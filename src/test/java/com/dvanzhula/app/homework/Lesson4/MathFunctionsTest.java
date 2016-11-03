@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by dmitry on 12.10.16.
+ * Created by Dmitry Vanzhula on 12.10.16.
  */
 public class MathFunctionsTest {
     @Test
