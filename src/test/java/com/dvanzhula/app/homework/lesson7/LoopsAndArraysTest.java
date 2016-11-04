@@ -2,6 +2,7 @@ package com.dvanzhula.app.homework.lesson7;
 
 import com.dvanzhula.app.homework.Lesson7.LoopsAndArrays;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,37 +10,44 @@ import org.junit.Test;
  */
 public class LoopsAndArraysTest {
 
+    LoopsAndArrays loopsAndArrays;
+
+    @Before
+    public void createObject(){
+        LoopsAndArrays loopsAndArrays = new LoopsAndArrays();
+    }
+
     @Test
     public void createArrayTest() {
         int[] arrayLength = new int[6];
-        Assert.assertArrayEquals(arrayLength, LoopsAndArrays.createArray(6));
+        Assert.assertArrayEquals(arrayLength,loopsAndArrays.createArray(6));
     }
 
     @Test
     public void createMultidimensionalArrayTest() {
         int[][] arrayLength = new int[8][5];
-        Assert.assertArrayEquals(arrayLength, LoopsAndArrays.createMultidimensionalArray(8, 5));
+        Assert.assertArrayEquals(arrayLength,loopsAndArrays.createMultidimensionalArray(8, 5));
     }
 
     @Test
     public void showAnArrayOfEvenNumbersTest() {
         int[] expRes = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
         int[] array = LoopsAndArrays.createArray(11);
-        Assert.assertArrayEquals(expRes, LoopsAndArrays.showAnArrayOfEvenNumbers(array));
+        Assert.assertArrayEquals(expRes,loopsAndArrays.showAnArrayOfEvenNumbers(array));
     }
 
     @Test
     public void showAnArrayOfOddNumbersTest() {
         int[] expRes = {0, 3, 5, 7, 9};
         int[] array = LoopsAndArrays.createArray(5);
-        Assert.assertArrayEquals(expRes, LoopsAndArrays.showAnArrayOfOddNumbers(array));
+        Assert.assertArrayEquals(expRes,loopsAndArrays.showAnArrayOfOddNumbers(array));
     }
 
     @Test
     public void generatorOfRandomNumbersMinBoundaryTest() {
         int minValue = 0;
         int maxValue = 9;
-        int random = LoopsAndArrays.generatorOfRandomNumbers(minValue, maxValue);
+        int random = loopsAndArrays.generatorOfRandomNumbers(minValue, maxValue);
         Assert.assertFalse("Error, number is too low", random < minValue);
     }
 
@@ -47,7 +55,7 @@ public class LoopsAndArraysTest {
     public void generatorOfRandomNumbersMaxBoundaryTest() {
         int minValue = 0;
         int maxValue = 9;
-        int random = LoopsAndArrays.generatorOfRandomNumbers(minValue, maxValue);
+        int random = loopsAndArrays.generatorOfRandomNumbers(minValue, maxValue);
         Assert.assertFalse("Error, number is too high", random > maxValue);
     }
 
@@ -56,7 +64,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 15;
         int minValue = 0;
         int maxValue = 999;
-        int[] random = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
+        int[] random = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
         Assert.assertFalse("Error, minimum is too low", LoopsAndArrays.showMinNumber(random) < minValue);
     }
 
@@ -65,7 +73,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 15;
         int minValue = 0;
         int maxValue = 999;
-        int[] random = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
+        int[] random = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
         Assert.assertFalse("Error, maximum is too high", LoopsAndArrays.showMinNumber(random) > maxValue);
     }
 
@@ -74,7 +82,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 15;
         int minValue = 0;
         int maxValue = 999;
-        int[] random = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
+        int[] random = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
         Assert.assertFalse("Error, minimum is too low", LoopsAndArrays.showMaxNumber(random) < minValue);
     }
 
@@ -83,7 +91,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 15;
         int minValue = 0;
         int maxValue = 999;
-        int[] random = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
+        int[] random = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength,minValue,maxValue);
         Assert.assertFalse("Error, maximum is too high", LoopsAndArrays.showMaxNumber(random) > maxValue);
     }
 
@@ -92,7 +100,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 16;
         int minValue = 0;
         int maxValue = 9;
-        int[] myArray = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength, minValue, maxValue);
+        int[] myArray = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength, minValue, maxValue);
         Assert.assertEquals(arrayLength, myArray.length);
     }
 
@@ -102,7 +110,7 @@ public class LoopsAndArraysTest {
         int arrayLength = 16;
         int minValue = 0;
         int maxValue = 9;
-        int[] myArray = LoopsAndArrays.fillAnArrayWithRandomNumb(arrayLength, minValue, maxValue);
+        int[] myArray = loopsAndArrays.fillAnArrayWithRandomNumb(arrayLength, minValue, maxValue);
         for (int i = 0; i < arrayLength; i++) {
             if (myArray[i] < minValue || myArray[i] > maxValue) {
                 allValuesInRange = false;
@@ -117,7 +125,7 @@ public class LoopsAndArraysTest {
         int arrayLength2 = 5;
         int minValue = 10;
         int maxValue = 99;
-        int[][] myArray = LoopsAndArrays.fillMultidimensionalArrayWithRandomNumb(arrayLength, arrayLength2, minValue, maxValue);
+        int[][] myArray = loopsAndArrays.fillMultidimensionalArrayWithRandomNumb(arrayLength, arrayLength2, minValue, maxValue);
         Assert.assertEquals(arrayLength, arrayLength2, myArray.length);
     }
 
@@ -127,7 +135,7 @@ public class LoopsAndArraysTest {
         int arrayLength2 = 5;
         int minValue = 10;
         int maxValue = 99;
-        int[][] myArray = LoopsAndArrays.fillMultidimensionalArrayWithRandomNumb(arrayLength, arrayLength2, minValue, maxValue);
+        int[][] myArray = loopsAndArrays.fillMultidimensionalArrayWithRandomNumb(arrayLength, arrayLength2, minValue, maxValue);
         boolean allValueInRange = true;
         for (int i = 0; i < arrayLength; i++) {
             for (int k = 0; k < arrayLength2; k++) {
@@ -136,6 +144,7 @@ public class LoopsAndArraysTest {
                 }
             }
         }
+        Assert.assertTrue(allValueInRange);
     }
 
     @Test
@@ -144,7 +153,7 @@ public class LoopsAndArraysTest {
         int arrayLength2 = 5;
         int minValue = 10;
         int maxValue = 99;
-        int[][] myArray = LoopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, minValue, maxValue);
+        int[][] myArray = loopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, minValue, maxValue);
         Assert.assertEquals(arrayLength, arrayLength2, myArray.length);
     }
 
@@ -154,7 +163,7 @@ public class LoopsAndArraysTest {
         int arrayLength2 = 5;
         int minValue = 10;
         int maxValue = 99;
-        int[][] myArray = LoopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, minValue, maxValue);
+        int[][] myArray = loopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, minValue, maxValue);
         boolean allValueInRange = true;
         for (int i = 0; i < arrayLength; i++) {
             for (int k = 0; k < arrayLength2; k++) {
@@ -163,14 +172,14 @@ public class LoopsAndArraysTest {
                 }
             }
         }
-
+        Assert.assertTrue(allValueInRange);
     }
 
     @Test
     public void calculateHowManyEvenNumbersTest() {
         int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int expRes = 4;
-        Assert.assertEquals(expRes, LoopsAndArrays.calculateHowManyEvenNumbers(myArray));
+        Assert.assertEquals(expRes,loopsAndArrays.calculateHowManyEvenNumbers(myArray));
 
     }
 

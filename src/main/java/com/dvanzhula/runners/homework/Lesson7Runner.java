@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by Dmitry Vanzhula on 10/24/2016.
  */
-public class Lesson7LoopsArraysRunner {
+public class Lesson7Runner {
     public static void main(String[] args) {
 
         while (true) {

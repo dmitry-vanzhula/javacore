@@ -18,6 +18,5 @@ public class ArrayPrint {
         String myString = Arrays.toString(myArray);
         System.out.println("Char array: \n" + myString);
     }
-
 }
 

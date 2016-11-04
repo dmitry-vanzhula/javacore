@@ -5,13 +5,15 @@ package com.dvanzhula.app.classwork.lesson10;
  */
 public class Palindrome {
 
-    public static Boolean isPalindrome(String s) {
-        for (int i = 0; i < s.length() / 2; ++i) {
+    public static Boolean isPalindrome(String inputData) {
+        for (int i = 0; i < inputData.length() / 2; i++) {
             // Сравниваем символ с начала и конца
-            if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
+            if (inputData.charAt(i) != inputData.charAt(inputData.length() -  i - 1)) {
+                System.out.println("The word isn't palindrome" );
                 return false; // символы не равны, не полиндром, возвращаем фальшь
             }
         }
+        System.out.println("The word is palindrome");
         return true; // проверка не выявила несовпадающих символов, возвращаем истину
     }
 }

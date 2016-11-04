@@ -5,12 +5,15 @@ package com.dvanzhula.app.classwork.lesson10;
  */
 public class ArrayOfCharsToString {
 
-        public static String convertCharToString (char[] arrayOfChar) {
-            String myString = " ";
-            for(int i = 0; i < arrayOfChar.length;i++){
-                myString = myString + arrayOfChar[i];
-            }
-            System.out.println(myString);
-            return myString;
+    public static String convertCharToString(char[] arrayOfChar) {
+        String myString = new String();
+        for (int i = 0; i < arrayOfChar.length; i++) {
+            myString = myString + arrayOfChar[i];
+            if (i != arrayOfChar.length - 1)
+                myString += ",";
+        }
+
+        System.out.println("String " + myString);
+        return myString;
     }
 }
