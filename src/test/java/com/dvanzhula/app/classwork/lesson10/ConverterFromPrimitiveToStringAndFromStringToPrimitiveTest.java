@@ -15,7 +15,7 @@ public class ConverterFromPrimitiveToStringAndFromStringToPrimitiveTest {
 
     @Before
     public void createObject() {
-        ConverterFromPrimitiveToStringAndFromStringToPrimitive converter = new ConverterFromPrimitiveToStringAndFromStringToPrimitive();
+        converter = new ConverterFromPrimitiveToStringAndFromStringToPrimitive();
     }
 
     @Test

@@ -14,7 +14,7 @@ public class ArraySortTest {
 
     @Before
     public void createObject() {
-        ArraySort arraySort = new ArraySort();
+        arraySort = new ArraySort();
     }
 
     @Test

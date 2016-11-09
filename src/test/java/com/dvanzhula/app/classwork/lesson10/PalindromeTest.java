@@ -13,7 +13,7 @@ public class PalindromeTest {
 
     @Before
     public void createObject() {
-        Palindrome palindrome = new Palindrome();
+        palindrome = new Palindrome();
     }
 
     @Test

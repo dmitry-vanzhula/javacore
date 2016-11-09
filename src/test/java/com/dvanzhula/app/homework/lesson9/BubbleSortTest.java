@@ -14,7 +14,7 @@ public class BubbleSortTest {
 
     @Before
     public void createObject() {
-        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort = new BubbleSort();
     }
 
     @Test

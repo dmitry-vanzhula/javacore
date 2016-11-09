@@ -14,7 +14,7 @@ public class ConverterCharArrayToStringTest {
 
     @Before
     public void createObject() {
-        ConverterCharArrayToString converterCharArrayToString = new ConverterCharArrayToString();
+        converterCharArrayToString = new ConverterCharArrayToString();
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson3.PrimitiveConvertor;
+import com.dvanzhula.app.homework.Lesson3.PrimitiveConverter;
 
 /**
  * Created by Dmitry Vanzhula on 09.10.16.
@@ -9,9 +9,13 @@ public class Lesson3Runner {
 
     public static void main(String[] args) {
 
-PrimitiveConvertor pc = new PrimitiveConvertor();
-        pc.floatToChar(11.999f);
-        pc.intToChar(666);
-        pc.charToInt('*');
+        float inputFloat = 44.0f;
+        int inputInt = 66;
+        char inputChar = ('*');
+
+        PrimitiveConverter primitiveConverter = new PrimitiveConverter();
+        primitiveConverter.floatToChar(inputFloat);
+        primitiveConverter.intToChar(inputInt);
+        primitiveConverter.charToInt(inputChar);
     }
 }

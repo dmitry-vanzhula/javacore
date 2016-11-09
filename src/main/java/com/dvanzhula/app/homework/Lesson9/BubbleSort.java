@@ -5,7 +5,7 @@ package com.dvanzhula.app.homework.Lesson9;
  */
 public class BubbleSort {
 
-    public static int[] arraySortingFromSmallestToLargest(int[] array) {
+    public int[] arraySortingFromSmallestToLargest(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -18,7 +18,7 @@ public class BubbleSort {
         return array;
     }
 
-    public static int[] arraySortingFromLargestToSmallest(int[] array) {
+    public int[] arraySortingFromLargestToSmallest(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] < array[j + 1]) {

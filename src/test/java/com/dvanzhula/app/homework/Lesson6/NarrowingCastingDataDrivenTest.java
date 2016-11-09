@@ -5,6 +5,7 @@ import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -13,13 +14,19 @@ import org.junit.runner.RunWith;
  */
 @RunWith(JUnitParamsRunner.class)
 public class NarrowingCastingDataDrivenTest {
+    NarrowingCasting narrowingCasting;
+
+    @Before
+    public void createObjectTest(){
+        narrowingCasting = new NarrowingCasting();
+    }
 
     @Test
     @FileParameters(value = "src/test/resources/narrowingTestData.csv",
     mapper = CsvWithHeaderMapper.class)
 
     public void narrowingTest(int argA, float argB, int expOut){
-        Assert.assertEquals(expOut,NarrowingCasting.narrowing(argA,argB));
+        Assert.assertEquals(expOut,narrowingCasting.narrowing(argA,argB));
     }
 
 }

@@ -2,7 +2,7 @@ package com.dvanzhula.runners.classwork;
 
 import com.dvanzhula.app.classwork.Lesson9.ArraySort;
 import com.dvanzhula.app.classwork.Lesson9.ConverterCharArrayToString;
-import com.dvanzhula.runners.homework.ArrayPrint;
+import com.dvanzhula.runners.homework.OutputPrint;
 
 /**
  * Created by Dmitry Vanzhula on 10/29/16.
@@ -10,11 +10,16 @@ import com.dvanzhula.runners.homework.ArrayPrint;
 public class Lesson9Runner {
 
     public static void main(String[] args) {
-
         int[] array = {5, 4, 3, 2, 1};
-        ArrayPrint.showOutputResultForArrays(ArraySort.bubbleSorting(array));
+
+        System.out.println("Input array");
+        OutputPrint.showOutputResultForArrays(array);
+        System.out.println("Sorted array");
+        ArraySort arraySort = new ArraySort();
+        OutputPrint.showOutputResultForArrays(arraySort.bubbleSorting(array));
 
         char[] myArray = new char[256];
-        ArrayPrint.showOutputResultForStrings(ConverterCharArrayToString.fillArrayOfAsciiCharacters(myArray));
+        ConverterCharArrayToString converterCharArrayToString = new ConverterCharArrayToString();
+        OutputPrint.showOutputResultForStrings(converterCharArrayToString.fillArrayOfAsciiCharacters(myArray));
     }
 }
