@@ -14,7 +14,7 @@ public class LoopsAndArraysTest {
 
     @Before
     public void createObject(){
-        LoopsAndArrays loopsAndArrays = new LoopsAndArrays();
+        loopsAndArrays = new LoopsAndArrays();
     }
 
     @Test
@@ -182,6 +182,4 @@ public class LoopsAndArraysTest {
         Assert.assertEquals(expRes,loopsAndArrays.calculateHowManyEvenNumbers(myArray));
 
     }
-
-
 }

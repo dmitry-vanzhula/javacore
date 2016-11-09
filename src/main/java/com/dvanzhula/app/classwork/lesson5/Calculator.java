@@ -5,44 +5,41 @@ package com.dvanzhula.app.classwork.lesson5;
  */
 public class Calculator {
 
-    public static boolean rightAngledTriangleChecker(double a, double b, double c) {
-        boolean result = false;
+    private static final double PI = 3.14d;
+
+    public boolean rightAngledTriangleChecker(double a, double b, double c) {
+        boolean result;
         if (c * c == a * a + b * b) {
-            System.out.println("This is right angled triangle");
             result = true;
         } else {
-            System.out.println("This is not right angled triangle");
+            result = false;
         }
         return result;
     }
 
-    private static final double PI = 3.14d;
-
-    public static double calculateCircleRadius(double radius) {
+    public double calculateCircleRadius(double radius) {
         double PI = Math.PI;
         double circleArea = PI * radius * radius;
-        System.out.println("Area is " + circleArea);
         return circleArea;
     }
 
-    public static boolean isOddOrEven(int number) {
-        boolean result = false;
+    public boolean isOddOrEven(int number) {
+        boolean result;
         if (number % 2 > 0) {
-            System.out.println("Number is odd");
             result = true;
         } else {
-            System.out.println("Number is even");
+            result = false;
         }
         return result;
     }
 
-    public static boolean calculateBigger(double area1, double area2) {
-        boolean result = false;
+    public boolean calculateBigger(double area1, double area2) {
+        boolean result;
         if (area1 > area2) {
-            System.out.println("Area1 is bigger");
             result = true;
-        } else
-            System.out.println("Area2 is bigger");
+        } else {
+            result = false;
+        }
         return result;
     }
 }

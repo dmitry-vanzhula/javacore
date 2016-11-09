@@ -1,8 +1,6 @@
 package com.dvanzhula.app.homework.Lesson7;
 
 
-import java.util.Arrays;
-
 /**
  * Created by Dmitry Vanzhula on 10/27/2016.
  */
@@ -39,20 +37,15 @@ public class LoopsAndArrays {
     public static int[] showAnArrayOfEvenNumbers(int[] array) {
         for (int i = 1; i < array.length; i++) {
             array[i] = i * 2;
-            System.out.print(array[i] + " ");
         }
-        System.out.println(" ");
-        System.out.println(" ");
         return array;
     }
 
     public static int[] showAnArrayOfOddNumbers(int[] array) {
         for (int i = 1; i < array.length; i++) {
             array[i] = i * 2 + 1;
-            System.out.print(array[i] + " ");
         }
-        System.out.println(" ");
-        System.out.println(" ");
+
         return array;
     }
 
@@ -68,10 +61,6 @@ public class LoopsAndArrays {
                 evenNumbers++;
             }
         }
-        System.out.print("Even numbers are " + evenNumbers + " ");
-        System.out.println(" ");
-        System.out.println(Arrays.toString(arrayOfRandomNumbers));
-        System.out.println("  ");
         return evenNumbers;
     }
 
@@ -82,10 +71,6 @@ public class LoopsAndArrays {
                 minimum = arrayOfRandomNumbers[i];
             }
         }
-        System.out.println(" Minimum number is " + " " + minimum);
-        System.out.println("  ");
-        System.out.println(Arrays.toString(arrayOfRandomNumbers));
-        System.out.println("  ");
         return minimum;
     }
 
@@ -96,10 +81,6 @@ public class LoopsAndArrays {
                 maximum = arrayOfRandomNumbers[i];
             }
         }
-        System.out.println(" Maximum number is " + " " + maximum);
-        System.out.println("  ");
-        System.out.println(Arrays.toString(arrayOfRandomNumbers));
-        System.out.println("  ");
         return maximum;
     }
 
@@ -109,13 +90,6 @@ public class LoopsAndArrays {
             for (int k = 0; k < arrayLength2; k++) {
                 array[i][k] = generatorOfRandomNumbers(min, max);
             }
-        }
-        for (int i = 0; i < array.length; i++) {
-            System.out.printf("%d%s", i + 1, ":");
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.printf("%5d", array[i][j]);
-            }
-            System.out.println("");
         }
         return array;
     }

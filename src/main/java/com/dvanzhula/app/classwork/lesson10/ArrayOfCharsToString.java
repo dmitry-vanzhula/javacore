@@ -5,7 +5,7 @@ package com.dvanzhula.app.classwork.lesson10;
  */
 public class ArrayOfCharsToString {
 
-    public static String convertCharToString(char[] arrayOfChar) {
+    public String convertCharToString(char[] arrayOfChar) {
         String myString = new String();
         for (int i = 0; i < arrayOfChar.length; i++) {
             myString = myString + arrayOfChar[i];

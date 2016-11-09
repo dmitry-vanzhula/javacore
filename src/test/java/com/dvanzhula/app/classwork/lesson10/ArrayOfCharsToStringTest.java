@@ -9,11 +9,11 @@ import org.junit.Test;
  */
 public class ArrayOfCharsToStringTest {
 
-    public ArrayOfCharsToString arrayOfCharsToString;
+    public ArrayOfCharsToString arrayOfCharsToString = new ArrayOfCharsToString();
 
     @Before
-    public void createObjectTest(){
-        ArrayOfCharsToString arrayOfCharsToString = new ArrayOfCharsToString();
+        public void createObjectTest(){
+        arrayOfCharsToString = new ArrayOfCharsToString();
     }
     @Test
     public void convertCharToStringTest(){

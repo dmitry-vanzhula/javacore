@@ -4,8 +4,7 @@ package com.dvanzhula.app.homework.Lesson3;
  * Created by Dmitry Vanzhula on 09.10.16.
  */
 
-public class PrimitiveConvertor {
-
+public class PrimitiveConverter {
 
     public char floatToChar(float floatNumber) {
         char charSymbol = (char) floatNumber;

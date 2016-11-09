@@ -5,7 +5,7 @@ package com.dvanzhula.app.classwork.Lesson9;
  */
 public class ConverterCharArrayToString {
 
-    public static char[] fillArrayOfAsciiCharacters(char[] myArray) {
+    public char[] fillArrayOfAsciiCharacters(char[] myArray) {
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = (char) (i+48);
         }
