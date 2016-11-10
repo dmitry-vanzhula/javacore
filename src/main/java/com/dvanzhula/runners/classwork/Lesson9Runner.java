@@ -1,7 +1,7 @@
 package com.dvanzhula.runners.classwork;
 
-import com.dvanzhula.app.classwork.Lesson9.ArraySort;
-import com.dvanzhula.app.classwork.Lesson9.ConverterCharArrayToString;
+import com.dvanzhula.app.classwork.lesson9.ArraySort;
+import com.dvanzhula.app.classwork.lesson9.ConverterCharArrayToString;
 import com.dvanzhula.runners.homework.OutputPrint;
 
 /**

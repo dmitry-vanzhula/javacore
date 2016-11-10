@@ -1,4 +1,4 @@
-package com.dvanzhula.app.classwork.Lesson9;
+package com.dvanzhula.app.classwork.lesson9;
 
 /**
  * Created by Dmitry Vanzhula on 10/29/16.
