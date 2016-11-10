@@ -1,7 +1,7 @@
 package com.dvanzhula.app.classwork.lesson10;
 
 /**
- * Created by dmitry on 11/2/16.
+ * Created by Dmitry Vanzhula on 11/2/16.
  */
 public class ArrayOfCharsToString {
 
@@ -13,7 +13,7 @@ public class ArrayOfCharsToString {
                 myString += ",";
         }
 
-        System.out.println("String " + myString);
+        System.out.println(myString);
         return myString;
     }
 }
