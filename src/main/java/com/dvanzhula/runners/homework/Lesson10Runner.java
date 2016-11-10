@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson10.Palindrome;
+import com.dvanzhula.app.homework.Lesson10.Palindrome2;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Lesson10Runner {
             System.out.println("Number 3 - program to check palindrome string");
             System.out.println("Number 4 - Exit");
             try {
-                Palindrome palindrome = new Palindrome();
+                Palindrome2 palindrome = new Palindrome2();
                 int inputNumber = scanner.nextInt();
 
                 switch (inputNumber) {

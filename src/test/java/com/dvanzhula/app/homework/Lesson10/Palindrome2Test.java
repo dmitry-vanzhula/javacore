@@ -7,13 +7,13 @@ import org.junit.Test;
 /**
  * Created by Dmitry Vanzhula on 11/4/16.
  */
-public class PalindromeTest {
+public class Palindrome2Test {
 
-    public Palindrome palindrome;
+    public Palindrome2 palindrome;
 
     @Before
     public void createObjectTest(){
-        palindrome = new Palindrome();
+        palindrome = new Palindrome2();
     }
     @Test
     public void isPolindromeTrueTest(){

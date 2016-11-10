@@ -3,7 +3,7 @@ package com.dvanzhula.app.homework.Lesson10;
 /**
  * Created by Dmitry Vanzhula on 11/4/16.
  */
-public class Palindrome {
+public class Palindrome2 {
 
     public boolean isPolindrome(String original) {
         boolean polindrome = false;
