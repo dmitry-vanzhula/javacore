@@ -58,6 +58,11 @@ public class OutputPrint {
         System.out.println("Area is " + radius);
 
     }
+
+    public static void showOutputResultForString(String inputString){
+        System.out.println(inputString);
+
+    }
 }
 
 

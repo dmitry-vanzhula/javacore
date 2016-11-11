@@ -7,8 +7,7 @@ import com.dvanzhula.app.classwork.lesson11.EnigmaCipher;
  */
 public class Lesson11Runner {
     public static void main(String[] args) {
-
         EnigmaCipher enigmaCipher = new EnigmaCipher();
-        enigmaCipher.stringEncode("FIGHT");
+        enigmaCipher.encodeString("BED");
     }
 }
