@@ -1,13 +1,15 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson11.ArrayParser;
+import com.dvanzhula.app.homework.Lesson12.ArrayParser;
+import com.dvanzhula.app.homework.Lesson12.Enigma;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * Created by Dmitry Vanzhula on 11/11/2016.
  */
-public class Lesson11Runner {
+public class Lesson12Runner {
     public static void main(String[] args) {
         boolean exit = false;
         do {
@@ -18,10 +20,12 @@ public class Lesson11Runner {
             System.out.println("Number 1 - Task 'A'");
             System.out.println("Number 2 - Task 'B'");
             System.out.println("Number 3 - Task 'C'");
-            System.out.println("Number 4 - Exit");
+            System.out.println("Number 4 - Task 'D'");
+            System.out.println("Number 5 - Exit");
             try {
                 int inputNumber = scanner.nextInt();
                 ArrayParser arrayParser = new ArrayParser();
+                Enigma enigma = new Enigma();
 
                 switch (inputNumber) {
                     case 1:
@@ -75,8 +79,31 @@ public class Lesson11Runner {
                         arrayParser.checkKeyWord(sentence, keyWord);
                         break;
                     case 4:
-                        exit = true;
+                        scanner.nextLine();
+                        System.out.println("Enter the sentence");
+                        String sentence2 = scanner.nextLine();
+                        System.out.println("Number 1 - Encrypt string");
+                        System.out.println("Number 2 - Decrypt string");
+                        try {
+
+                            int choiceEnigma = scanner.nextInt();
+                            switch (choiceEnigma) {
+                                case 1:
+                                    System.out.println("Encrypted string:");
+                                    enigma.encodeString(sentence2);
+                                    break;
+                                case 2:
+                                    System.out.println("Decrypted string:");
+                                    enigma.decodeString(sentence2);
+                                    break;
+                            }
+                        }catch (InputMismatchException e){
+                            System.out.println("Wrong input");
+                        }
+
                         break;
+                    case 5:
+                        exit = true;
                 }
             } catch (java.util.InputMismatchException e1) {
                 System.out.println("Error, wrong input. Please enter a valid number!");
