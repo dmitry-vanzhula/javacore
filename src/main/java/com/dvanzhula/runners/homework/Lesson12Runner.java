@@ -32,8 +32,6 @@ public class Lesson12Runner {
                         System.out.println("Type numbers in a row, separated by semicolon");
                         scanner.nextLine();
                         String inputStr = scanner.nextLine();
-
-
                         System.out.println("How to sort an array?");
                         System.out.println("Number 1 - From smallest to bigger");
                         System.out.println("Number 2 - From bigger to smallest");
