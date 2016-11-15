@@ -31,25 +31,23 @@ public class Lesson12Runner {
                     case 1:
                         System.out.println("Type numbers in a row, separated by semicolon");
                         scanner.nextLine();
-                        String inputString = scanner.nextLine();
-                        String string = inputString.replaceAll(";", "");
-                        char[] array = string.toCharArray();
+                        String inputStr = scanner.nextLine();
+
+
                         System.out.println("How to sort an array?");
-                        System.out.println("Number 1 - From bigger to smallest");
-                        System.out.println("Number 2 - From smallest to bigger");
+                        System.out.println("Number 1 - From smallest to bigger");
+                        System.out.println("Number 2 - From bigger to smallest");
                         System.out.println("Number 3 - Exit");
                         try {
                             int choice = scanner.nextInt();
                             switch (choice) {
                                 case 1:
-                                    arrayParser.sortFromSmallestToBigger(array);
                                     System.out.println("Your result:");
-                                    OutputPrint.showOutputResultForString(arrayParser.convertCharArrayToStringAndSplitBySemicolon(array));
+                                    OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromSmallestToBigger(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
                                 case 2:
-                                    arrayParser.sortFromBiggerToSmallest(array);
                                     System.out.println("Your result:");
-                                    OutputPrint.showOutputResultForString(arrayParser.convertCharArrayToStringAndSplitBySemicolon(array));
+                                    OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromBiggerToSmallest(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
                                 case 3:
                                     break;
@@ -64,7 +62,7 @@ public class Lesson12Runner {
                         scanner.nextLine();
                         System.out.println("Type array of chars in a row, separated by comma");
                         String inputSt = scanner.nextLine();
-                        String replaceInputSt = inputSt.replaceAll("[0-9,]", "");
+                        String replaceInputSt = inputSt.replaceAll("[0-9,]", "").replaceAll("\\s", "").replaceAll(";","");
                         char[] array2 = replaceInputSt.toCharArray();
                         arrayParser.convertCharArrayToStringAndSplitByComma(array2);
                         System.out.println("Your result:");

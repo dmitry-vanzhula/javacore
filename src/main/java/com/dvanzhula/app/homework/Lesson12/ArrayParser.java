@@ -4,11 +4,11 @@ package com.dvanzhula.app.homework.Lesson12;
  * Created by Dmitry Vanzhula on 11/11/2016.
  */
 public class ArrayParser {
-    public char[] sortFromSmallestToBigger(char[] array) {
+    public int[] sortFromSmallestToBigger(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
-                    char temporary = array[j];
+                    int temporary = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temporary;
                 }
@@ -17,11 +17,11 @@ public class ArrayParser {
         return array;
     }
 
-    public char[] sortFromBiggerToSmallest(char[] array) {
+    public int[] sortFromBiggerToSmallest(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] < array[j + 1]) {
-                    char temporary = array[j];
+                    int temporary = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temporary;
                 }
@@ -30,7 +30,7 @@ public class ArrayParser {
         return array;
     }
 
-    public String convertCharArrayToStringAndSplitBySemicolon(char[] array) {
+    public String convertIntArrayToStringAndSplitBySemicolon(int[] array) {
         StringBuilder stringBuilder = new StringBuilder(array.length);
         stringBuilder.append(array);
         String result = "";
@@ -67,6 +67,14 @@ public class ArrayParser {
             isKeyWord = false;
         }
         return isKeyWord;
+    }
+    public int[] convertStringToIntArray(String inputStr) {
+        String[] strArray = inputStr.replaceAll(";",",").replaceAll("\\s", "").split(",");
+        int[] array = new int[strArray.length];
+        for (int i = 0; i < strArray.length; i++) {
+            array[i] = Integer.parseInt(strArray[i]);
+        }
+        return array;
     }
 }
 
