@@ -60,7 +60,7 @@ public class Lesson12Runner {
                         scanner.nextLine();
                         System.out.println("Type array of chars in a row, separated by comma");
                         String inputSt = scanner.nextLine();
-                        String replaceInputSt = inputSt.replaceAll("[0-9,]", "").replaceAll("\\s", "").replaceAll(";","");
+                        String replaceInputSt = inputSt.replaceAll("[0-9,&,%,^,:,;,*,?,/,#,№,!,@,_,+,$,(,),~,|,{,},>,<,.,-]", "").replaceAll("\\s", "").replaceAll("\\[]","");
                         char[] array2 = replaceInputSt.toCharArray();
                         arrayParser.convertCharArrayToStringAndSplitByComma(array2);
                         System.out.println("Your result:");
