@@ -60,7 +60,9 @@ public class ArrayParser {
         boolean isKeyWord;
         if(sentence.indexOf(keyWord)!= -1){
             String newString = sentence.replaceAll(keyWord,"");
-            System.out.println(newString);
+            String[] stringArray = newString.split(" ");
+            for (String array : stringArray)
+                System.out.println(array);
             isKeyWord = true;
         }else{
             System.out.println(sentence);
