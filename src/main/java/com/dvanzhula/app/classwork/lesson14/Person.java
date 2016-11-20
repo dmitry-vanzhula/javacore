@@ -14,7 +14,6 @@ public class Person {
     public String setName(String name){
         this.name = name;
         return name;
-
     }
 
     public String getName (){

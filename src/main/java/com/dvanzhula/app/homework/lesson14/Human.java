@@ -29,4 +29,8 @@ public class Human {
             System.out.println("Age invalid");
         }
     }
+
+    public int getAge(){
+        return age;
+    }
 }

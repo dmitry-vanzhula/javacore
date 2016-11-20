@@ -13,6 +13,7 @@ public class Lesson14Runner {
         human.setName("Dasha");
         System.out.println(human.getName());
         human.setAge(20);
+        System.out.println(human.getAge());
 
         System.out.println();
 
