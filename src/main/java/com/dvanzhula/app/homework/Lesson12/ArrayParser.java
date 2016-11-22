@@ -56,6 +56,19 @@ public class ArrayParser {
         return result;
     }
 
+    public String convertIntArrayToStringAndSplitByComma(int[] array) {
+        StringBuilder stringBuilder = new StringBuilder(array.length);
+        stringBuilder.append(array);
+        String result = "";
+        for (int i = 0; i < array.length; i++) {
+            result = result + array[i];
+            if (i != array.length-1) {
+                result = result + ",";
+            }
+        }
+        return result;
+    }
+
     public boolean checkKeyWord(String sentence,String keyWord){
         boolean isKeyWord;
         if(sentence.indexOf(keyWord)!= -1){

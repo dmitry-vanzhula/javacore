@@ -2,18 +2,17 @@ package com.dvanzhula.app.classwork.lesson13;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 /**
  * Created by Dmitry Vanzhula on 11/12/16.
  */
-public class FileReaderLesson11 {
+public class FileReaderLesson13 {
     public static void main(String[] args) {
 
         try {
             BufferedReader reader = new BufferedReader(
-                    new FileReader("/home/dmitry/Projects/javacore/src/test/resources/info"));
+                    new java.io.FileReader("/home/dmitry/Projects/javacore/src/test/resources/info"));
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);

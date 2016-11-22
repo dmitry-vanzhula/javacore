@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class FileReaderPolindrome {
 
-    private static final String INPUT_PATH = "/home/dmitry/Projects/javacore/src/test/resources/inputPolindrome.csv";
+    private static final String INPUT_PATH = "src/test/resources/inputPolindrome.csv";
     private static final String OUTPUT_PATH = "src/test/resources/outputPolindrome.csv";
 
     public static void main(String[] args) {
