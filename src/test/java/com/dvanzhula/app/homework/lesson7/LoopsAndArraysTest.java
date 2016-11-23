@@ -1,6 +1,5 @@
 package com.dvanzhula.app.homework.lesson7;
 
-import com.dvanzhula.app.homework.Lesson7.LoopsAndArrays;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework.Lesson7;
+package com.dvanzhula.app.homework.lesson7;
 
 
 /**

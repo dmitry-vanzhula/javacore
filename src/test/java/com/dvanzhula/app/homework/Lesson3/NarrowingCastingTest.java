@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework.Lesson3;
+package com.dvanzhula.app.homework.lesson3;
 
 import com.dvanzhula.app.classwork.lesson3.NarrowingCasting;
 import org.junit.Assert;

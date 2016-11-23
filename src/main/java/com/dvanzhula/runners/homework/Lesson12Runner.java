@@ -1,7 +1,7 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson12.ArrayParser;
-import com.dvanzhula.app.homework.Lesson12.Enigma;
+import com.dvanzhula.app.homework.lesson12.ArrayParser;
+import com.dvanzhula.app.homework.lesson12.Enigma;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

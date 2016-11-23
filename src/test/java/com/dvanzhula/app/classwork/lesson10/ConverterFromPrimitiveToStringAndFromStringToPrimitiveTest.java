@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.dvanzhula.app.homework.Lesson4.MathFunctionsTest.DELTA;
+import static com.dvanzhula.app.homework.lesson4.MathFunctionsTest.DELTA;
 
 /**
  * Created by Dmitry Vanzhula on 11/4/2016.

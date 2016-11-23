@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson10.Palindrome2;
+import com.dvanzhula.app.homework.lesson10.Palindrome2;
 
 import java.util.Scanner;
 

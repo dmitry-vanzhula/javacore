@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson9.BubbleSort;
+import com.dvanzhula.app.homework.lesson9.BubbleSort;
 
 /**
  * Created by Dmitry Vanzhula on 11/2/2016.

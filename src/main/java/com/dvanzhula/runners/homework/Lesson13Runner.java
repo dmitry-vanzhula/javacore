@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson12.ArrayParser;
+import com.dvanzhula.app.homework.lesson12.ArrayParser;
 import com.dvanzhula.app.homework.lesson13.MyFileCreator;
 import com.dvanzhula.app.homework.lesson13.MyFileReader;
 import com.dvanzhula.app.homework.lesson13.MyFileWriter;

@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework.Lesson6;
+package com.dvanzhula.app.homework.lesson6;
 
 import com.dvanzhula.app.classwork.lesson3.NarrowingCasting;
 import junitparams.FileParameters;

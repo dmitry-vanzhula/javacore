@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson3.PrimitiveConverter;
+import com.dvanzhula.app.homework.lesson3.PrimitiveConverter;
 
 /**
  * Created by Dmitry Vanzhula on 09.10.16.

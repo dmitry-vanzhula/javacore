@@ -1,6 +1,6 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.Lesson7.LoopsAndArrays;
+import com.dvanzhula.app.homework.lesson7.LoopsAndArrays;
 
 import java.util.Scanner;
 

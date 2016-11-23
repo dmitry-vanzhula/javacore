@@ -1,4 +1,4 @@
-package com.dvanzhula.app.homework.Lesson3;
+package com.dvanzhula.app.homework.lesson3;
 
 /**
  * Created by Dmitry Vanzhula on 09.10.16.
