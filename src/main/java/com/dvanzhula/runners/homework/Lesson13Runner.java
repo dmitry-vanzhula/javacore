@@ -1,5 +1,6 @@
 package com.dvanzhula.runners.homework;
 
+import com.dvanzhula.app.classwork.lesson16.EnumerationTask;
 import com.dvanzhula.app.homework.lesson12.ArrayParser;
 import com.dvanzhula.app.homework.lesson13.MyFileCreator;
 import com.dvanzhula.app.homework.lesson13.MyFileReader;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 /**
  * Created by Dmitry Vanzhula on 11/22/2016.
  */
+
 public class Lesson13Runner {
     public static void main(String[] args) {
 
@@ -17,20 +19,23 @@ public class Lesson13Runner {
         do {
             Scanner scanner = new Scanner(System.in);
             System.out.println(" ");
-            System.out.println("Enter a number 1-3:");
+            System.out.println("Enter a letter");
             System.out.println(" ");
-            System.out.println("Number 1 - Task 'A'");
-            System.out.println("Number 2 - Task 'C'");
-            System.out.println("Number 3 - Exit");
+            System.out.println("Letter A - Task 'A'");
+            System.out.println("Letter B - Task 'C'");
+            System.out.println("Letter C - Exit");
             try {
-                int inputNumber = scanner.nextInt();
+                String task = "";
+                task = scanner.nextLine();
                 String fileName;
                 MyFileReader myFileReader = new MyFileReader();
                 ArrayParser arrayParser = new ArrayParser();
                 MyFileWriter myFileWriter = new MyFileWriter();
                 MyFileCreator myFileCreator = new MyFileCreator();
-                switch (inputNumber) {
-                    case 1:
+                EnumerationTask enumerationTask = EnumerationTask.valueOf(task);
+
+                switch (task) {
+                    case "A":
                         System.out.println("Enter the path to the input file:");
                         scanner.nextLine();
                         String pathToFile = scanner.nextLine();
@@ -59,18 +64,21 @@ public class Lesson13Runner {
                             System.out.println("Error, wrong input. Please enter a valid number!");
                         }
                         break;
-                    case 2:
-                        scanner.nextLine();
+                    case "B":
                         System.out.println("Enter the file name");
                         fileName = scanner.nextLine();
                         System.out.println("Enter the text");
                         myFileWriter.writeNewFile(myFileReader.readNewFile(), myFileCreator.createNewFile(fileName));
                         break;
-                    case 3:
+                    case "C":
                         exit = true;
+                        default:
+                            System.out.println("Invalid letter");
                 }
             } catch (java.util.InputMismatchException e1) {
                 System.out.println("Error, wrong input. Please enter a valid number!");
+            } catch (IllegalArgumentException e){
+                System.out.println("ERROR! Wrong input");
             }
         } while (exit != true);
     }
