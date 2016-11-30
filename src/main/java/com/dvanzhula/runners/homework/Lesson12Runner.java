@@ -2,6 +2,7 @@ package com.dvanzhula.runners.homework;
 
 import com.dvanzhula.app.homework.lesson12.ArrayParser;
 import com.dvanzhula.app.homework.lesson12.Enigma;
+import com.dvanzhula.app.homework.lesson16.EnumMenuForHomeworkRunners;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,41 +14,43 @@ public class Lesson12Runner {
     public static void main(String[] args) {
         boolean exit = false;
         do {
-            Scanner scanner = new Scanner(System.in);
             System.out.println(" ");
-            System.out.println("Enter a number 1-4:");
-            System.out.println(" ");
-            System.out.println("Number 1 - Task 'A'");
-            System.out.println("Number 2 - Task 'B'");
-            System.out.println("Number 3 - Task 'C'");
-            System.out.println("Number 4 - Task 'D'");
-            System.out.println("Number 5 - Exit");
+            System.out.println("Enter a letter:");
+            EnumMenuForHomeworkRunners.A.setDescription("Letter A - Task 'A'");
+            EnumMenuForHomeworkRunners.B.setDescription("Letter B - Task 'B'");
+            EnumMenuForHomeworkRunners.C.setDescription("Letter C - Task 'C'");
+            EnumMenuForHomeworkRunners.D.setDescription("Letter D - Task 'D'");
+            EnumMenuForHomeworkRunners.E.setDescription("Letter E - Exit)");
+            for(EnumMenuForHomeworkRunners enumMenu : EnumMenuForHomeworkRunners.values()){
+                System.out.println(enumMenu.getDescription());
+            }
             try {
-                int inputNumber = scanner.nextInt();
+                String choice;
+                Scanner scanner = new Scanner(System.in);
+                choice = scanner.nextLine();
                 ArrayParser arrayParser = new ArrayParser();
                 Enigma enigma = new Enigma();
 
-                switch (inputNumber) {
-                    case 1:
+                switch (choice) {
+                    case "A":
                         System.out.println("Type numbers in a row, separated by semicolon");
-                        scanner.nextLine();
                         String inputStr = scanner.nextLine();
                         System.out.println("How to sort an array?");
-                        System.out.println("Number 1 - From smallest to bigger");
-                        System.out.println("Number 2 - From bigger to smallest");
-                        System.out.println("Number 3 - Exit");
+                        System.out.println("Letter a - From smallest to bigger");
+                        System.out.println("Letter b - From bigger to smallest");
+                        System.out.println("Letter c - Exit");
                         try {
-                            int choice = scanner.nextInt();
-                            switch (choice) {
-                                case 1:
+                            String choice2 = scanner.nextLine();
+                            switch (choice2) {
+                                case "a":
                                     System.out.println("Your result:");
                                     OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromSmallestToBigger(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
-                                case 2:
+                                case "b":
                                     System.out.println("Your result:");
                                     OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromBiggerToSmallest(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
-                                case 3:
+                                case "c":
                                     break;
                                 default:
                                     System.out.println("Wrong input");
@@ -56,8 +59,7 @@ public class Lesson12Runner {
                             System.out.println("Error, wrong input. Please enter a valid number!");
                         }
                         break;
-                    case 2:
-                        scanner.nextLine();
+                    case "B":
                         System.out.println("Type array of chars in a row, separated by comma");
                         String inputSt = scanner.nextLine();
                         String replaceInputSt = inputSt.replaceAll("[0-9,&,%,^,:,;,*,?,/,#,№,!,@,_,+,$,(,),~,|,{,},>,<,.,-]", "").replaceAll("\\s", "").replaceAll("\\[]","");
@@ -66,39 +68,40 @@ public class Lesson12Runner {
                         System.out.println("Your result:");
                         OutputPrint.showOutputResultForString(arrayParser.convertCharArrayToStringAndSplitByComma(array2));
                         break;
-                    case 3:
-                        scanner.nextLine();
+                    case "C":
                         System.out.println("Enter the string");
                         String sentence = scanner.nextLine();
                         System.out.println("Enter key word");
                         String keyWord = scanner.nextLine();
                         arrayParser.checkKeyWord(sentence, keyWord);
                         break;
-                    case 4:
-                        scanner.nextLine();
+                    case "D":
                         System.out.println("Enter the sentence");
                         String sentence2 = scanner.nextLine();
-                        System.out.println("Number 1 - Encrypt string");
-                        System.out.println("Number 2 - Decrypt string");
+                        System.out.println("Letter a - Encrypt string");
+                        System.out.println("Letter b - Decrypt string");
+                        System.out.println("Letter c - Exit");
                         try {
-
-                            int choiceEnigma = scanner.nextInt();
+                            String choiceEnigma = scanner.nextLine();
                             switch (choiceEnigma) {
-                                case 1:
+                                case "a":
                                     System.out.println("Encrypted string:");
                                     enigma.encodeString(sentence2);
                                     break;
-                                case 2:
+                                case "b":
                                     System.out.println("Decrypted string:");
                                     enigma.decodeString(sentence2);
                                     break;
+                                case "c":
+                                    break;
+                                default:
+                                    System.out.println("ERROR! Wrong input");
                             }
                         }catch (InputMismatchException e){
-                            System.out.println("Wrong input");
+                            System.out.println("ERROR! Wrong input");
                         }
-
                         break;
-                    case 5:
+                    case "E":
                         exit = true;
                 }
             } catch (java.util.InputMismatchException e1) {

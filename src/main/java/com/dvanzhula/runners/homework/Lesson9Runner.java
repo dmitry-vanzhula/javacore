@@ -1,6 +1,10 @@
 package com.dvanzhula.runners.homework;
 
-import com.dvanzhula.app.homework.lesson9.BubbleSort;
+import com.dvanzhula.app.homework.lesson12.ArrayParser;
+import com.dvanzhula.app.homework.lesson16.EnumMenuForHomeworkRunners;
+import com.dvanzhula.app.homework.lesson3.PrimitiveConverter;
+
+import java.util.Scanner;
 
 /**
  * Created by Dmitry Vanzhula on 11/2/2016.
@@ -8,17 +12,45 @@ import com.dvanzhula.app.homework.lesson9.BubbleSort;
 public class Lesson9Runner {
 
     public static void main(String[] args) {
-        int[] array = {5, 3, 1, 2, 6};
-        BubbleSort bubbleSort = new BubbleSort();
-        System.out.println("Input array:");
-        OutputPrint.showOutputResultForArrays(array);
-        System.out.println("Bubble sorted array from smallest to largest:");
-        OutputPrint.showOutputResultForArrays(bubbleSort.arraySortingFromSmallestToLargest(array));
-
-        int[] array2 = {5, 3, 1, 2, 6};
-        System.out.println("Input array:");
-        OutputPrint.showOutputResultForArrays(array2);
-        System.out.println("Bubble sorted array from largest to smallest:");
-        OutputPrint.showOutputResultForArrays(bubbleSort.arraySortingFromLargestToSmallest(array2));
+        boolean exit = false;
+        do {
+            System.out.println("Welcome to converter, enter a letter:");
+            EnumMenuForHomeworkRunners.A.setDescription("Letter A - Sorting an array of numbers from smallest to largest");
+            EnumMenuForHomeworkRunners.B.setDescription("Letter B - Sorting an array of numbers from largest to smallest");
+            EnumMenuForHomeworkRunners.C.setDescription("Letter C - Exit");
+            for (EnumMenuForHomeworkRunners enumMenu : EnumMenuForHomeworkRunners.values()) {
+                System.out.println(enumMenu.getDescription());
+            }
+            try {
+                String choice;
+                String inputStr;
+                Scanner scanner = new Scanner(System.in);
+                choice = scanner.nextLine();
+                PrimitiveConverter primitiveConverter = new PrimitiveConverter();
+                ArrayParser arrayParser = new ArrayParser();
+                EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
+                switch (choice) {
+                    case "A":
+                        System.out.println("Enter the array of numbers separated by comma:");
+                        inputStr = scanner.nextLine();
+                        System.out.println("Your result:");
+                        OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitByComma(arrayParser.sortFromSmallestToBigger(arrayParser.convertStringToIntArray(inputStr))));
+                        break;
+                    case "B":
+                        System.out.println("Enter the array of numbers separated by comma:");
+                        inputStr = scanner.nextLine();
+                        System.out.println("Your result:");
+                        OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitByComma(arrayParser.sortFromBiggerToSmallest(arrayParser.convertStringToIntArray(inputStr))));
+                        break;
+                    case "C":
+                        exit = true;
+                        break;
+                }
+            } catch (java.util.InputMismatchException e1) {
+                System.out.println("ERROR! Wrong input");
+            } catch (IllegalArgumentException e) {
+                System.out.println("ERROR! Wrong input");
+            }
+        } while (exit != true);
     }
 }

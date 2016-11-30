@@ -1,6 +1,7 @@
 package com.dvanzhula.runners.homework;
 
 import com.dvanzhula.app.homework.lesson10.Palindrome2;
+import com.dvanzhula.app.homework.lesson16.EnumMenuForHomeworkRunners;
 
 import java.util.Scanner;
 
@@ -12,39 +13,38 @@ public class Lesson10Runner {
 
         boolean exit = false;
         do {
-            System.out.println();
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Choose your program, enter a number 1-4:");
-            System.out.println("Number 1 - program to check palindrome string");
-            System.out.println("Number 2 - program to check palindrome string");
-            System.out.println("Number 3 - program to check palindrome string");
-            System.out.println("Number 4 - Exit");
+            System.out.println("");
+            System.out.println("Choose your program, enter a letter:");
+            EnumMenuForHomeworkRunners.A.setDescription("Letter A - Program to check palindrome string (version1)");
+            EnumMenuForHomeworkRunners.B.setDescription("Letter B - Program to check palindrome string (version2)");
+            EnumMenuForHomeworkRunners.C.setDescription("Letter C - Program to check palindrome string (version3)");
+            EnumMenuForHomeworkRunners.D.setDescription("Letter D - Exit");
+            for(EnumMenuForHomeworkRunners enumMenu: EnumMenuForHomeworkRunners.values()){
+                System.out.println(enumMenu.getDescription());
+            }
             try {
                 Palindrome2 palindrome = new Palindrome2();
-                int inputNumber = scanner.nextInt();
-
-                switch (inputNumber) {
-                    case 1:
+                Scanner scanner = new Scanner(System.in);
+                String choice = scanner.nextLine();
+                switch (choice) {
+                    case "A":
                         System.out.println("Enter a string to check if it is a palindrome");
-                        scanner.nextLine();
                         String word = scanner.nextLine();
                         if (palindrome.isPolindrome(word))
                             System.out.println("Entered string is a palindrome.");
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case 2:
+                    case "B":
                         System.out.println("Enter a string to check if it is a palindrome");
-                        scanner.nextLine();
                         String word2 = scanner.nextLine();
                         if(palindrome.checkPolindrome(word2))
                             System.out.println("Entered string is a palindrome.");
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case 3:
+                    case "C":
                         System.out.println("Enter a string to check if it is a palindrome");
-                        scanner.nextLine();
                         String word3 = scanner.nextLine();
                         if(palindrome.determinePalindrome(word3)){
                             System.out.println("Entered string is a palindrome.");
@@ -52,11 +52,11 @@ public class Lesson10Runner {
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case 4:
+                    case "D":
                         exit = true;
                         break;
                     default:
-                        System.out.println("Wrong input");
+                        System.out.println("Error, wrong input! Please enter a valid letter!");
                 }
             } catch (java.util.InputMismatchException e1) {
                 System.out.println("Error, wrong input. Please enter a valid number!");

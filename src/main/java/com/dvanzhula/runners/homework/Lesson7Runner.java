@@ -1,5 +1,6 @@
 package com.dvanzhula.runners.homework;
 
+import com.dvanzhula.app.homework.lesson16.EnumMenuForHomeworkRunners;
 import com.dvanzhula.app.homework.lesson7.LoopsAndArrays;
 
 import java.util.Scanner;
@@ -11,17 +12,18 @@ public class Lesson7Runner {
     public static void main(String[] args) {
         boolean exit = false;
         do {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println(" ");
-            System.out.println("Enter a number 1-7:");
-            System.out.println(" ");
-            System.out.println("Number 1 - Show all even numbers in an array");
-            System.out.println("Number 2 - Show all odd numbers in an array");
-            System.out.println("Number 3 - Count the number of even numbers in an array (array filled with random numbers)");
-            System.out.println("Number 4 - Determine the minimum number of array (array filled with random numbers)");
-            System.out.println("Number 5 - Determine the maximum number of array (array filled with random numbers)");
-            System.out.println("Number 6 - Show multidimensional array (array filled with random numbers)");
-            System.out.println("Number 7 - Exit");
+            System.out.println("");
+            System.out.println("Enter a letter:");
+            EnumMenuForHomeworkRunners.A.setDescription("Letter A - Create a new array of even numbers");
+            EnumMenuForHomeworkRunners.B.setDescription("Letter B - Create a new array of odd numbers");
+            EnumMenuForHomeworkRunners.C.setDescription("Letter C - Count the number of even numbers in an array (array filled with random numbers)");
+            EnumMenuForHomeworkRunners.D.setDescription("Letter D - Determine the minimum number of array (array filled with random numbers)");
+            EnumMenuForHomeworkRunners.E.setDescription("Letter E - Determine the maximum number of array (array filled with random numbers)");
+            EnumMenuForHomeworkRunners.F.setDescription("Letter F - Create a new multidimensional array (array filled with random numbers)");
+            EnumMenuForHomeworkRunners.G.setDescription("Letter G - Exit");
+            for(EnumMenuForHomeworkRunners enumMenu : EnumMenuForHomeworkRunners.values()){
+                System.out.println(enumMenu.getDescription());
+            }
             try {
                 int arrayLength;
                 int arrayLength2;
@@ -29,28 +31,25 @@ public class Lesson7Runner {
                 int max;
                 int [] array;
                 int [] arrayOfRandomNumbers;
-                int inputNumber = scanner.nextInt();
+                Scanner scanner = new Scanner(System.in);
+                String choice = scanner.nextLine();
                 LoopsAndArrays loopsAndArrays = new LoopsAndArrays();
-                switch (inputNumber) {
-                    case 1:
+                switch (choice) {
+                    case "A":
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         array = loopsAndArrays.createArray(arrayLength);
                         System.out.println("Even numbers are:");
                         OutputPrint.showOutputResultForArrays(loopsAndArrays.showAnArrayOfEvenNumbers(array));
-                        System.out.println();
-                        System.out.println();
                         break;
-                    case 2:
+                    case "B":
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         array = loopsAndArrays.createArray(arrayLength);
                         System.out.println("Odd numbers are:");
                         OutputPrint.showOutputResultForArrays2(loopsAndArrays.showAnArrayOfOddNumbers(array));
-                        System.out.println();
-                        System.out.println();
                         break;
-                    case 3:
+                    case "C":
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter the minimum boundary");
@@ -63,9 +62,8 @@ public class Lesson7Runner {
                         System.out.print(" ");
                         OutputPrint.showOutputResultForHowManyEvenNumbers(loopsAndArrays.calculateHowManyEvenNumbers(arrayOfRandomNumbers));
                         System.out.print(" ");
-                        System.out.print(" ");
                         break;
-                    case 4:
+                    case "D":
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter the minimum boundary");
@@ -78,7 +76,7 @@ public class Lesson7Runner {
                         System.out.print(" ");
                         OutputPrint.showOutputResultForMinAndMaxNumber((loopsAndArrays.showMinNumber(arrayOfRandomNumbers)));
                         break;
-                    case 5:
+                    case "E":
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter minimum boundary");
@@ -91,7 +89,7 @@ public class Lesson7Runner {
                         System.out.print(" ");
                         OutputPrint.showOutputResultForMinAndMaxNumber(loopsAndArrays.showMaxNumber(arrayOfRandomNumbers));
                         break;
-                    case 6:
+                    case "F":
                         System.out.println("Enter length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter length 2");
@@ -100,14 +98,13 @@ public class Lesson7Runner {
                         min = scanner.nextInt();
                         System.out.println("Enter maximum boundary");
                         max = scanner.nextInt();
-                        //LoopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, min, max);
                         System.out.println("Array:");
                         OutputPrint.showOutputResultForMultidimensionalArray(loopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, min, max));
-                    case 7:
+                    case "G":
                         exit = true;
                         break;
                     default:
-                        System.out.println("Error, wrong input. Please enter a valid number!");
+                        System.out.println("Error, wrong input! Please enter a valid letter!");
                         break;
                 }
             } catch (java.util.InputMismatchException e1) {
