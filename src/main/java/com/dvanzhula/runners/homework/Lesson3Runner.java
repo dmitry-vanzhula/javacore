@@ -31,26 +31,27 @@ public class Lesson3Runner {
                 choice = scanner.nextLine();
                 PrimitiveConverter primitiveConverter = new PrimitiveConverter();
                 EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
-                switch (choice) {
-                    case "A":
+                switch (enumMenu) {
+                    case A:
                         System.out.println("Enter enter a floating point number:");
                         inputFloat = scanner.nextFloat();
                         System.out.println("Your result:");
                         primitiveConverter.floatToChar(inputFloat);
                         break;
-                    case "B":
+                    case B:
                         System.out.println("Enter an integer number:");
                         inputInt = scanner.nextInt();
                         System.out.println("Your result:");
                         primitiveConverter.intToChar(inputInt);
                         break;
-                    case "C":
+                    case C:
                         System.out.println("Enter the character:");
                         inputChar = scanner.next().charAt(0);
                         System.out.println("Your result:");
                         primitiveConverter.charToInt(inputChar);
+                        System.out.println();
                         break;
-                    case "D":
+                    case D:
                         exit = true;
                         break;
                 }

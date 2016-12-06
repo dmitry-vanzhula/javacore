@@ -30,9 +30,9 @@ public class Lesson12Runner {
                 choice = scanner.nextLine();
                 ArrayParser arrayParser = new ArrayParser();
                 Enigma enigma = new Enigma();
-
-                switch (choice) {
-                    case "A":
+                EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
+                switch (enumMenu) {
+                    case A:
                         System.out.println("Type numbers in a row, separated by semicolon");
                         String inputStr = scanner.nextLine();
                         System.out.println("How to sort an array?");
@@ -41,16 +41,17 @@ public class Lesson12Runner {
                         System.out.println("Letter c - Exit");
                         try {
                             String choice2 = scanner.nextLine();
-                            switch (choice2) {
-                                case "a":
+                            enumMenu = EnumMenuForHomeworkRunners.valueOf(choice2);
+                            switch (enumMenu) {
+                                case a:
                                     System.out.println("Your result:");
                                     OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromSmallestToBigger(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
-                                case "b":
+                                case b:
                                     System.out.println("Your result:");
                                     OutputPrint.showOutputResultForString(arrayParser.convertIntArrayToStringAndSplitBySemicolon(arrayParser.sortFromBiggerToSmallest(arrayParser.convertStringToIntArray(inputStr))));
                                     break;
-                                case "c":
+                                case c:
                                     break;
                                 default:
                                     System.out.println("Wrong input");
@@ -59,7 +60,7 @@ public class Lesson12Runner {
                             System.out.println("Error, wrong input. Please enter a valid number!");
                         }
                         break;
-                    case "B":
+                    case B:
                         System.out.println("Type array of chars in a row, separated by comma");
                         String inputSt = scanner.nextLine();
                         String replaceInputSt = inputSt.replaceAll("[0-9,&,%,^,:,;,*,?,/,#,№,!,@,_,+,$,(,),~,|,{,},>,<,.,-]", "").replaceAll("\\s", "").replaceAll("\\[]","");
@@ -68,14 +69,14 @@ public class Lesson12Runner {
                         System.out.println("Your result:");
                         OutputPrint.showOutputResultForString(arrayParser.convertCharArrayToStringAndSplitByComma(array2));
                         break;
-                    case "C":
+                    case C:
                         System.out.println("Enter the string");
                         String sentence = scanner.nextLine();
                         System.out.println("Enter key word");
                         String keyWord = scanner.nextLine();
                         arrayParser.checkKeyWord(sentence, keyWord);
                         break;
-                    case "D":
+                    case D:
                         System.out.println("Enter the sentence");
                         String sentence2 = scanner.nextLine();
                         System.out.println("Letter a - Encrypt string");
@@ -83,16 +84,17 @@ public class Lesson12Runner {
                         System.out.println("Letter c - Exit");
                         try {
                             String choiceEnigma = scanner.nextLine();
-                            switch (choiceEnigma) {
-                                case "a":
+                            enumMenu = EnumMenuForHomeworkRunners.valueOf(choiceEnigma);
+                            switch (enumMenu) {
+                                case a:
                                     System.out.println("Encrypted string:");
                                     enigma.encodeString(sentence2);
                                     break;
-                                case "b":
+                                case b:
                                     System.out.println("Decrypted string:");
                                     enigma.decodeString(sentence2);
                                     break;
-                                case "c":
+                                case c:
                                     break;
                                 default:
                                     System.out.println("ERROR! Wrong input");
@@ -101,7 +103,7 @@ public class Lesson12Runner {
                             System.out.println("ERROR! Wrong input");
                         }
                         break;
-                    case "E":
+                    case E:
                         exit = true;
                 }
             } catch (java.util.InputMismatchException e1) {

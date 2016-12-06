@@ -28,32 +28,35 @@ public class Lesson13Runner {
             try {
                 Scanner scanner = new Scanner(System.in);
                 String choice;
+                String choice2;
                 choice = scanner.nextLine();
                 String fileName;
                 MyFileReader myFileReader = new MyFileReader();
                 ArrayParser arrayParser = new ArrayParser();
                 MyFileWriter myFileWriter = new MyFileWriter();
                 MyFileCreator myFileCreator = new MyFileCreator();
-                switch (choice) {
-                    case "A":
+                EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
+                switch (enumMenu) {
+                    case A:
                         System.out.println("Enter the path to the input file:");
                         String pathToFile = scanner.nextLine();
                         System.out.println("Enter the name of output file:");
                         fileName = scanner.nextLine();
                         System.out.println("How to sort an array?");
-                        System.out.println("Number 1 - From smallest to bigger");
-                        System.out.println("Number 2 - From bigger to smallest");
-                        System.out.println("Number 3 - Exit");
+                        System.out.println("Number a - From smallest to bigger");
+                        System.out.println("Number b - From bigger to smallest");
+                        System.out.println("Number c - Exit");
                         try {
-                            int choice2 = scanner.nextInt();
-                            switch (choice2) {
-                                case 1:
+                             choice2 = scanner.nextLine();
+                            enumMenu = EnumMenuForHomeworkRunners.valueOf(choice2);
+                            switch (enumMenu) {
+                                case a:
                                     myFileWriter.writeNewFile(arrayParser.convertIntArrayToStringAndSplitByComma(arrayParser.sortFromSmallestToBigger(arrayParser.convertStringToIntArray(myFileReader.readNewFileUsingPath(pathToFile)))), myFileCreator.createNewFile(fileName));
                                     break;
-                                case 2:
+                                case b:
                                     myFileWriter.writeNewFile(arrayParser.convertIntArrayToStringAndSplitByComma(arrayParser.sortFromBiggerToSmallest(arrayParser.convertStringToIntArray(myFileReader.readNewFileUsingPath(pathToFile)))), myFileCreator.createNewFile(fileName));
                                     break;
-                                case 3:
+                                case c:
                                     break;
                                 default:
                                     System.out.println("Wrong input");
@@ -62,13 +65,13 @@ public class Lesson13Runner {
                             System.out.println("Error, wrong input. Please enter a valid number!");
                         }
                         break;
-                    case "B":
+                    case B:
                         System.out.println("Enter the file name");
                         fileName = scanner.nextLine();
                         System.out.println("Enter the text. If you want to save the file, type the word 'exit' on a new line and press 'Enter' button");
                         myFileWriter.writeNewFile(myFileReader.readNewFile(), myFileCreator.createNewFile(fileName));
                         break;
-                    case "C":
+                    case C:
                         exit = true;
                 }
             } catch (java.util.InputMismatchException e1) {

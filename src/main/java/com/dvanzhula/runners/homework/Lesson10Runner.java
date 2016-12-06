@@ -26,8 +26,9 @@ public class Lesson10Runner {
                 Palindrome2 palindrome = new Palindrome2();
                 Scanner scanner = new Scanner(System.in);
                 String choice = scanner.nextLine();
-                switch (choice) {
-                    case "A":
+                EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
+                switch (enumMenu) {
+                    case A:
                         System.out.println("Enter a string to check if it is a palindrome");
                         String word = scanner.nextLine();
                         if (palindrome.isPolindrome(word))
@@ -35,7 +36,7 @@ public class Lesson10Runner {
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case "B":
+                    case B:
                         System.out.println("Enter a string to check if it is a palindrome");
                         String word2 = scanner.nextLine();
                         if(palindrome.checkPolindrome(word2))
@@ -43,7 +44,7 @@ public class Lesson10Runner {
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case "C":
+                    case C:
                         System.out.println("Enter a string to check if it is a palindrome");
                         String word3 = scanner.nextLine();
                         if(palindrome.determinePalindrome(word3)){
@@ -52,7 +53,7 @@ public class Lesson10Runner {
                         else
                             System.out.println("Entered string is not a palindrome.");
                         break;
-                    case "D":
+                    case D:
                         exit = true;
                         break;
                     default:

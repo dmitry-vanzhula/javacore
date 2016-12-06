@@ -34,22 +34,23 @@ public class Lesson7Runner {
                 Scanner scanner = new Scanner(System.in);
                 String choice = scanner.nextLine();
                 LoopsAndArrays loopsAndArrays = new LoopsAndArrays();
-                switch (choice) {
-                    case "A":
+                EnumMenuForHomeworkRunners enumMenu = EnumMenuForHomeworkRunners.valueOf(choice);
+                switch (enumMenu) {
+                    case A:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         array = loopsAndArrays.createArray(arrayLength);
                         System.out.println("Even numbers are:");
                         OutputPrint.showOutputResultForArrays(loopsAndArrays.showAnArrayOfEvenNumbers(array));
                         break;
-                    case "B":
+                    case B:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         array = loopsAndArrays.createArray(arrayLength);
                         System.out.println("Odd numbers are:");
                         OutputPrint.showOutputResultForArrays2(loopsAndArrays.showAnArrayOfOddNumbers(array));
                         break;
-                    case "C":
+                    case C:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter the minimum boundary");
@@ -63,7 +64,7 @@ public class Lesson7Runner {
                         OutputPrint.showOutputResultForHowManyEvenNumbers(loopsAndArrays.calculateHowManyEvenNumbers(arrayOfRandomNumbers));
                         System.out.print(" ");
                         break;
-                    case "D":
+                    case D:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter the minimum boundary");
@@ -76,7 +77,7 @@ public class Lesson7Runner {
                         System.out.print(" ");
                         OutputPrint.showOutputResultForMinAndMaxNumber((loopsAndArrays.showMinNumber(arrayOfRandomNumbers)));
                         break;
-                    case "E":
+                    case E:
                         System.out.println("Enter array length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter minimum boundary");
@@ -89,7 +90,7 @@ public class Lesson7Runner {
                         System.out.print(" ");
                         OutputPrint.showOutputResultForMinAndMaxNumber(loopsAndArrays.showMaxNumber(arrayOfRandomNumbers));
                         break;
-                    case "F":
+                    case F:
                         System.out.println("Enter length");
                         arrayLength = scanner.nextInt();
                         System.out.println("Enter length 2");
@@ -100,7 +101,7 @@ public class Lesson7Runner {
                         max = scanner.nextInt();
                         System.out.println("Array:");
                         OutputPrint.showOutputResultForMultidimensionalArray(loopsAndArrays.showMultidimensionalArrayOfRandomNumbers(arrayLength, arrayLength2, min, max));
-                    case "G":
+                    case G:
                         exit = true;
                         break;
                     default:
